@@ -67,8 +67,8 @@ Repository: [`/Prompt_Engineering_Demos`](./Prompt_Engineering_Demos)
 
 ## 📚 Education
 
-- **Master’s Degree in Electrical and Intelligent Systems Engineering** – [Specify University], 2023
-- **Bachelor’s Degree in Electrical Engineering** – [Specify University], 2021
+- **Master’s Degree in Electrical and Intelligent Systems Engineering** – EMSI, 2023
+- **Bachelor’s Degree in Electrical Engineering** – ENSEM, 2021
 
 ---
 
