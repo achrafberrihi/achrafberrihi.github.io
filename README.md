@@ -43,6 +43,25 @@ I’m currently based in Morocco and open to remote or international opportuniti
 
 ---
 
+## 💼 Professional Experience
+
+- **Lead Prompt Engineer — Lillup**  
+  Led a team of prompt engineers to craft and refine prompts for large language models, improving response accuracy and consistency.
+
+- **Team Lead AI Engineer & Data Annotation Lead — Micro1 AI**  
+  Oversaw data annotation initiatives and built AI training pipelines, ensuring high-quality labeled datasets and robust models.
+
+- **Contributor Coding Ai trainer — Scale AI**  
+  Performed large-scale data labeling and quality assurance for machine learning models across various use cases.
+
+- **Ai trainer and Annotation Specialist — Alignerr**  
+  Conducted precise data annotation and validation tasks for linguistic and AI training datasets.
+
+- **Annotator — SuperAnnotate**  
+  Worked on segmentation, classification, and object detection labeling for computer vision projects.
+
+  ---
+
 ## 🧠 Selected Projects
 
 ### 1. MoorMaster™ NXG – Predictive Maintenance System
