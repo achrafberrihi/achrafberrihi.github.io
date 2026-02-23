@@ -87,6 +87,10 @@ I’m currently based in Morocco and open to remote or international opportuniti
   <img src="https://streak-stats.demolab.com?user=achrafberrihi&theme=tokyonight&hide_border=true" />
 </p>
 
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,tensorflow,docker,git,github,linux,js,php,mysql&theme=dark" />
+</p>
+
 ## 💼 Professional Experience
 
 - **Lead Prompt Engineer — Lillup**  
