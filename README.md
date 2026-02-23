@@ -14,16 +14,6 @@
   <img src="https://skillicons.dev/icons?i=python,tensorflow,docker,git,github,linux,js,php,mysql&theme=dark" />
 </p>
 
-## 📊 GitHub Analytics (Dark)
-
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=achrafberrihi&show_icons=true&theme=tokyonight&hide_border=true" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=achrafberrihi&layout=compact&theme=tokyonight&hide_border=true" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=achrafberrihi&theme=tokyonight&hide_border=true" />
-</p>
 
 # Achraf Berrihi – Data & AI / Electrical Intelligents Systems Engineer
 <p align="center">
@@ -110,11 +100,16 @@ I’m currently based in Morocco and open to remote or international opportuniti
   <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
 </p>
 
-## 📊 GitHub Analytics
+
+## 📊 GitHub Analytics 
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=achrafberrihi&show_icons=true&theme=tokyonight" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=achrafberrihi&layout=compact&theme=tokyonight" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=achrafberrihi&show_icons=true&theme=tokyonight&hide_border=true" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=achrafberrihi&layout=compact&theme=tokyonight&hide_border=true" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=achrafberrihi&theme=tokyonight&hide_border=true" />
 </p>
 
 ## 💼 Professional Experience
