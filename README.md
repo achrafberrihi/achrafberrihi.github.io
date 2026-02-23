@@ -1,11 +1,25 @@
 # Achraf Berrihi – Data & AI / Electrical Intelligents Systems Engineer
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-Expert-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Advanced-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![LLM](https://img.shields.io/badge/LLM-Evaluation-8A2BE2?style=for-the-badge&logo=openai&logoColor=white)
+![Data Annotation](https://img.shields.io/badge/Data%20Annotation-Lead-00C853?style=for-the-badge)
+
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
 
 ## 👋 About Me
 
 Hello! I’m **Achraf Berrihi**, a Data and AI Engineer with a background in Electrical and Intelligent Systems Engineering. I lead prompt engineering and data annotation projects and enjoy building innovative AI solutions that blend technical precision with creative problem‑solving. My experience spans AI model training, predictive maintenance systems, and web data extraction.
 
 I’m currently based in Morocco and open to remote or international opportunities.
-
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
 **Contact**
 
 - 📧 Email: [achraf-berrihi@hotmail.com](mailto:achraf-berrihi@hotmail.com)
@@ -14,7 +28,15 @@ I’m currently based in Morocco and open to remote or international opportuniti
 
 ---
 
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
+
 ## 💻 Skills
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
 
 ### Programming Languages
 
@@ -22,18 +44,29 @@ I’m currently based in Morocco and open to remote or international opportuniti
 - **C++** – High‑performance computing and embedded systems
 - **PHP, JavaScript, HTML/CSS** – Web development
 - **SQL** – Relational databases, query optimization
+  
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
 
 ### AI & Machine Learning
 
 - **Scikit‑learn, NumPy, Pandas** – ML model building and data processing
 - **TensorFlow** – Deep learning experimentation
 - **Prompt Engineering & NLP** – Designing effective prompts for LLMs, text classification and annotation
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
 
 ### Data & Big Data Technologies
 
 - **Hadoop, Spark** – Distributed data processing
 - **SQL & NoSQL Databases** – Data storage and querying
-- **Data Annotation** – SuperAnnotate, ULabel
+- **Data Annotation** – SuperAnnotate, ULabel,LabelBoxe, DataPlus
+  
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
 
 ### DevOps & Tools
 
@@ -42,6 +75,10 @@ I’m currently based in Morocco and open to remote or international opportuniti
 - **VS Code & Jupyter Notebook** – Development environments
 
 ---
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
 
 ## 💼 Professional Experience
 
@@ -62,7 +99,15 @@ I’m currently based in Morocco and open to remote or international opportuniti
 
   ---
 
+  <p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
+
 ## 🧠 Selected Projects
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
 
 ### 1. MoorMaster™ NXG – Predictive Maintenance System
 
@@ -70,11 +115,19 @@ In this project I developed machine learning models to predict component failure
 
 Repository: [`/MoorMaster_ML_Maintenance`](./MoorMaster_ML_Maintenance)
 
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
+
 ### 2. Moroccan Recipes Web Scraper
 
 I built a web scraper using Python’s BeautifulSoup to collect and organize traditional Moroccan recipes from public websites. The script extracts ingredients, preparation steps, and nutritional information and stores the data in a structured format for analysis or sharing.
 
 Repository: [`/Moroccan_Recipes_Scraper`](./Moroccan_Recipes_Scraper)
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
 
 ### 3. Prompt Engineering Demos
 
@@ -84,12 +137,20 @@ Repository: [`/Prompt_Engineering_Demos`](./Prompt_Engineering_Demos)
 
 ---
 
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
+
 ## 📚 Education
 
 - **Master’s Degree in Electrical and Intelligent Systems Engineering** – EMSI, 2023
 - **Bachelor’s Degree in Data and AI Engineering** – ENSEM, 2021
 
 ---
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
 
 ## 🚀 Goals & Interests
 
