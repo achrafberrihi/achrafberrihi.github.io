@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="1768078147875.jpg" width="160" style="border-radius: 50%;" />
+</p>
+
+<p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;Electrical+%26+Intelligent+Systems+Engineer;LLM+Evaluation+%7C+Prompt+Engineering+%7C+Data+Annotation+Lead;Building+Scalable+AI+Solutions;Open+to+Remote+%26+Vendor+Partnerships" />
 </p>
 
@@ -36,7 +40,7 @@ My experience includes:
 
 ---
 
-## 🧠 What I Do (Focus Areas)
+## 🧠 What I Do 
 
 - ✅ **LLM Evaluation & Prompt Engineering** (quality, consistency, scoring rubrics)
 - ✅ **Data Annotation at Scale** (QA, guidelines, vendor/team management)
@@ -79,7 +83,7 @@ My experience includes:
 
 ---
 
-## 📊 GitHub Analytics (Dark)
+## 📊 GitHub Analytics 
 
 <p align="center">
   <img height="170" src="https://github-readme-stats.vercel.app/api?username=achrafberrihi&show_icons=true&theme=tokyonight&hide_border=true" />
@@ -151,16 +155,6 @@ Exemple (format clean) :
 
 ---
 
-## 🐍 Contribution Snake (Optionnel)
-> Si tu veux cette animation, je te donne le workflow GitHub Actions.
-
-<!--
-<p align="center">
-  <img src="https://raw.githubusercontent.com/achrafberrihi/achrafberrihi.github.io/output/github-contribution-grid-snake.svg" />
-</p>
--->
-
----
 
 ## 🚀 Goals & Interests
 
