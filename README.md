@@ -10,9 +10,7 @@
 </p>
 
 ## 👋 About Me
-<p align="center">
-<img src="https://skillicons.dev/icons?i=python,tensorflow,docker,git,github,linux,js,php,mysql" />
-</p>
+>
 Hello! I’m **Achraf Berrihi**, a Data and AI Engineer with a background in Electrical and Intelligent Systems Engineering. I lead prompt engineering and data annotation projects and enjoy building innovative AI solutions that blend technical precision with creative problem‑solving. My experience spans AI model training, predictive maintenance systems, and web data extraction.
 
 I’m currently based in Morocco and open to remote or international opportunities.
