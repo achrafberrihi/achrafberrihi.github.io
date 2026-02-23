@@ -46,6 +46,8 @@ I’m currently based in Morocco and open to remote or international opportuniti
 - **C++** – High‑performance computing and embedded systems
 - **PHP, JavaScript, HTML/CSS** – Web development
 - **SQL** – Relational databases, query optimization
+- **VHDL** – Software and Automation Programming 
+ 
   
 
 ### AI & Machine Learning
@@ -60,7 +62,13 @@ I’m currently based in Morocco and open to remote or international opportuniti
 - **Hadoop, Spark** – Distributed data processing
 - **SQL & NoSQL Databases** – Data storage and querying
 - **Data Annotation** – SuperAnnotate, ULabel,LabelBoxe, DataPlus
-  
+
+### Electrical & Intelligents Systems 
+
+- **MATLAB** – Electrical simulation signal simulation.
+- **CANECO** – Low Voltage Installation Drawing and Conception
+- **TIA PORTAL** – Siemens PLC programming
+- **AUTOCAD** – Electrical schematics Drawing H/L Voltage
 
 
 ### DevOps & Tools
@@ -98,6 +106,9 @@ I’m currently based in Morocco and open to remote or international opportuniti
 
 - **Annotator — SuperAnnotate**  
   Worked on segmentation, classification, and object detection labeling for computer vision projects.
+
+- **Maintenance Engineer**
+  Worked in Leading Team of Maintenance and Operations Agents For MoorMaster NXG a automated Mooring system.
 
   ---
 
@@ -140,6 +151,7 @@ Repository: [`/Prompt_Engineering_Demos`](./Prompt_Engineering_Demos)
 
 - **Master’s Degree in Electrical and Intelligent Systems Engineering** – EMSI, 2023
 - **Bachelor’s Degree in Data and AI Engineering** – ENSEM, 2021
+- **Diploma Of Specialized Technician in ElectroMecanical Engineering** – ISIC,2019 
 
 ---
 
