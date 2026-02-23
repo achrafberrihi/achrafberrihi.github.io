@@ -1,4 +1,4 @@
-# Achraf Berrihi – Data & AI Engineer
+# Achraf Berrihi – Data & AI / Electrical Intelligents Systems Engineer
 
 ## 👋 About Me
 
@@ -10,7 +10,7 @@ I’m currently based in Morocco and open to remote or international opportuniti
 
 - 📧 Email: [achraf-berrihi@hotmail.com](mailto:achraf-berrihi@hotmail.com)
 - 📞 Phone: +212 610 191026
-- 🌐 Portfolio Site: [achrafberrihi.github.io](https://achrafberrihi.github.io) *(once deployed)*
+- 🌐 Portfolio Site: [achrafberrihi.github.io](https://achrafberrihi.github.io) 
 
 ---
 
