@@ -14,6 +14,11 @@
 
 ## 👋 About Me
 
+## 🛠️ Tech Stack
+<p align="center">
+<img src="https://skillicons.dev/icons?i=python,tensorflow,docker,git,github,linux,js,php,mysql" />
+</p>
+
 Hello! I’m **Achraf Berrihi**, a Data and AI Engineer with a background in Electrical and Intelligent Systems Engineering. I lead prompt engineering and data annotation projects and enjoy building innovative AI solutions that blend technical precision with creative problem‑solving. My experience spans AI model training, predictive maintenance systems, and web data extraction.
 
 I’m currently based in Morocco and open to remote or international opportunities.
@@ -71,6 +76,13 @@ I’m currently based in Morocco and open to remote or international opportuniti
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+</p>
+
+## 📊 GitHub Analytics
+
+<p align="center">
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=achrafberrihi&show_icons=true&theme=tokyonight" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=achrafberrihi&layout=compact&theme=tokyonight" />
 </p>
 
 ## 💼 Professional Experience
@@ -147,7 +159,8 @@ Repository: [`/Prompt_Engineering_Demos`](./Prompt_Engineering_Demos)
 
 Thanks for visiting my portfolio! Feel free to explore the repositories above or reach out if you’d like to collaborate.
 
+## 🐍 Contribution Snake
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
-</p>
+  <img src="https://raw.githubusercontent.com/achrafberrihi/achrafberrihi/output/github-contribution-grid-snake.svg" />
+</p>>
