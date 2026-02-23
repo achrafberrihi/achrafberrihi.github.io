@@ -88,8 +88,9 @@ I’m currently based in Morocco and open to remote or international opportuniti
 </p>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,tensorflow,docker,git,github,linux,js,php,mysql&theme=dark" />
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
 </p>
+
 
 ## 💼 Professional Experience
 
