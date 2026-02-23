@@ -1,15 +1,12 @@
 # Achraf Berrihi – Data & AI / Electrical Intelligents Systems Engineer
 <p align="center">
-
-![Python](https://img.shields.io/badge/Python-Expert-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Advanced-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![LLM](https://img.shields.io/badge/LLM-Evaluation-8A2BE2?style=for-the-badge&logo=openai&logoColor=white)
-![Data Annotation](https://img.shields.io/badge/Data%20Annotation-Lead-00C853?style=for-the-badge)
-
+  <a href="mailto:achraf-berrihi@hotmail.com"><img src="https://img.shields.io/badge/Email-achraf--berrihi@hotmail.com-0D1117?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <img src="https://img.shields.io/badge/Location-Morocco-0D1117?style=for-the-badge&logo=googlemaps&logoColor=white"/>
+  <a href="https://achrafberrihi.github.io"><img src="https://img.shields.io/badge/Portfolio-achrafberrihi.github.io-0D1117?style=for-the-badge&logo=github&logoColor=white"/></a>
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
+  <img src="https://skillicons.dev/icons?i=python,tensorflow,docker,git,github,linux,js,php,mysql&theme=dark" />
 </p>
 
 ## 👋 About Me
