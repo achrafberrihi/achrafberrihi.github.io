@@ -10,14 +10,11 @@
 </p>
 
 ## 👋 About Me
->
+
 Hello! I’m **Achraf Berrihi**, a Data and AI Engineer with a background in Electrical and Intelligent Systems Engineering. I lead prompt engineering and data annotation projects and enjoy building innovative AI solutions that blend technical precision with creative problem‑solving. My experience spans AI model training, predictive maintenance systems, and web data extraction.
 
 I’m currently based in Morocco and open to remote or international opportunities.
 
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00C2FF&center=true&vCenter=true&width=900&lines=Achraf+Berrihi+—+Data+%26+AI+Engineer;LLM+Evaluation+%7C+Data+Annotation+Expert;Building+Scalable+AI+Solutions;Open+for+AI+Vendor+Partnerships" />
-</p>
 
 **Contact**
 
