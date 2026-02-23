@@ -170,8 +170,32 @@ Repository: [`/Prompt_Engineering_Demos`](./Prompt_Engineering_Demos)
 
 Thanks for visiting my portfolio! Feel free to explore the repositories above or reach out if you’d like to collaborate.
 
-## 🐍 Contribution Snake
+name: Generate Snake
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/achrafberrihi/achrafberrihi/output/github-contribution-grid-snake.svg" />
-</p>>
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate snake SVG
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: achrafberrihi
+          outputs: dist/github-contribution-grid-snake.svg
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
