@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — Intelligent Calendar</title>
+<style>
+  :root { color-scheme: light dark; --text: #1d1d1f; --muted: #6e6e73; --bg: #fff; --accent: #5a5ce6; }
+  @media (prefers-color-scheme: dark) { :root { --text: #f5f5f7; --muted: #a1a1a6; --bg: #111; --accent: #8e8ff5; } }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--text); background: var(--bg); margin: 0; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.8rem; line-height: 1.2; } h2 { font-size: 1.2rem; margin-top: 2em; }
+  a { color: var(--accent); } .muted { color: var(--muted); } table { border-collapse: collapse; width: 100%; }
+  td, th { border-bottom: 1px solid color-mix(in srgb, var(--muted) 30%, transparent); padding: 8px 6px; text-align: left; vertical-align: top; }
+</style>
+</head>
+<body>
+<main>
+<h1>Politique de confidentialité</h1>
+<p class="muted">Intelligent Calendar — dernière mise à jour : 30 octobre 2026 · <a href="#en">English version below</a></p>
+
+<p>Intelligent Calendar (« l'app ») est éditée par <strong>[VOTRE NOM ET PRÉNOM]</strong>, développeur indépendant établi au Maroc, joignable à <a href="mailto:[EMAIL DE CONTACT]">[EMAIL DE CONTACT]</a> (« nous »). Cette politique explique quelles données l'app traite, pourquoi, et quels sont vos droits.</p>
+
+<h2>1. Ce que l'app ne fait pas</h2>
+<ul>
+  <li>Vos <strong>événements de calendrier restent sur votre iPhone</strong> (app Calendrier d'Apple) : nous ne les copions pas sur nos serveurs.</li>
+  <li>Aucune publicité, aucun pistage publicitaire, aucune revente de données.</li>
+  <li>Nous ne conservons <strong>pas le contenu de vos demandes à l'assistant</strong>, seulement leur nombre (pour le quota).</li>
+</ul>
+
+<h2>2. Données traitées</h2>
+<table>
+<tr><th>Donnée</th><th>Pourquoi</th><th>Où / combien de temps</th></tr>
+<tr><td>Identifiant de compte Sign in with Apple, et votre nom si vous le partagez</td><td>Créer et sécuriser votre compte</td><td>Supabase (hébergeur, Union européenne), jusqu'à la suppression du compte</td></tr>
+<tr><td>Tâches (titre, notes, priorité, échéances, rappels)</td><td>Les synchroniser entre vos appareils</td><td>Supabase, jusqu'à leur suppression ou celle du compte</td></tr>
+<tr><td>Demandes à l'assistant IA : le texte écrit ou dicté, les horaires de vos événements des 14 prochains jours (et leurs titres seulement si vous l'activez), les titres et échéances de vos tâches ouvertes</td><td>Générer les propositions de l'assistant</td><td>Transmises à notre fournisseur d'IA (voir § 3) le temps de la réponse ; non conservées par nous</td></tr>
+<tr><td>Compteur de requêtes IA et nombre de tokens utilisés</td><td>Quota gratuit / abonnement, maîtrise des coûts</td><td>Supabase, durée du compte</td></tr>
+<tr><td>Statut d'abonnement (identifiants de transaction Apple, dates)</td><td>Activer l'abonnement Pro</td><td>Supabase, durée du compte</td></tr>
+<tr><td>Jeton de notification de l'appareil</td><td>Envoyer des notifications</td><td>Supabase, jusqu'à la suppression du compte</td></tr>
+<tr><td>Statistiques d'usage anonymes (TelemetryDeck) et rapports de plantage (Sentry), sans donnée personnelle</td><td>Améliorer l'app et corriger les bugs</td><td>Selon la politique de ces services</td></tr>
+</table>
+<p>La <strong>dictée vocale</strong> est transcrite sur votre iPhone par Apple quand l'appareil le permet ; nous ne recevons que le texte, et seulement si vous l'envoyez à l'assistant.</p>
+
+<h2>3. Sous-traitants</h2>
+<ul>
+  <li><strong>Supabase</strong> : base de données, authentification et serveur (région Union européenne).</li>
+  <li><strong>Fournisseur d'IA</strong> : actuellement <strong>Groq, Inc.</strong> (États-Unis), qui traite les demandes à l'assistant pour générer la réponse. Si nous changeons de fournisseur, cette page sera mise à jour avant le changement.</li>
+  <li><strong>Apple</strong> : connexion (Sign in with Apple), paiements et abonnements (App Store), notifications.</li>
+  <li><strong>TelemetryDeck</strong> (statistiques anonymisées) et <strong>Sentry</strong> (rapports de plantage).</li>
+</ul>
+<p>Nous traitons vos données conformément à la loi marocaine n° 09-08 et, pour les utilisateurs de l'Union européenne, au RGPD. Certains sous-traitants sont situés hors du Maroc et de l'Union européenne ; les transferts sont encadrés par les clauses contractuelles types de la Commission européenne ou un mécanisme équivalent.</p>
+
+<h2>4. Votre consentement à l'IA</h2>
+<p>Rien n'est envoyé à l'assistant avant que vous l'ayez accepté sur l'écran dédié. Vous pouvez retirer ce consentement à tout moment dans <em>Réglages → Assistant IA</em> : plus aucun envoi n'a lieu. L'app reste utilisable sans l'assistant et sans compte.</p>
+
+<h2>5. Vos droits</h2>
+<p>Vous pouvez accéder à vos données, les rectifier, les exporter, vous opposer à un traitement ou les effacer. <strong>Supprimer votre compte</strong> se fait directement dans l'app (<em>Réglages → Supprimer le compte</em>) : votre compte, vos tâches et votre historique sont effacés définitivement et l'accès Sign in with Apple est révoqué. Pour toute autre demande : <a href="mailto:[EMAIL DE CONTACT]">[EMAIL DE CONTACT]</a>. Vous pouvez aussi saisir l'autorité de protection des données de votre pays : au Maroc, la CNDP (loi n° 09-08) ; dans l'Union européenne, l'autorité de votre pays de résidence (en France, la CNIL).</p>
+
+<h2>6. Enfants</h2>
+<p>L'app ne s'adresse pas aux enfants de moins de 13 ans et ne collecte pas sciemment leurs données.</p>
+
+<h2>7. Modifications</h2>
+<p>Nous vous informerons dans l'app de toute modification importante de cette politique.</p>
+
+<hr>
+<h1 id="en">Privacy Policy (English)</h1>
+<p>Intelligent Calendar is published by <strong>[YOUR FULL NAME]</strong>, an independent developer based in Morocco (<a href="mailto:[CONTACT EMAIL]">[CONTACT EMAIL]</a>).</p>
+<ul>
+  <li><strong>Calendar events stay on your iPhone</strong>; we don't copy them to our servers. No ads, no tracking, no data sales.</li>
+  <li><strong>Account</strong> (Sign in with Apple identifier, optional name), <strong>tasks</strong>, <strong>subscription status</strong>, <strong>AI request counts</strong> and <strong>device push token</strong> are stored with Supabase (EU region) until you delete your account.</li>
+  <li><strong>AI assistant</strong>: after you consent, your request text, the times of your events for the next 14 days (titles only if you enable it) and your open tasks are sent to our AI provider, currently <strong>Groq, Inc.</strong> (USA), only to generate the answer. We don't keep the content of requests, only how many you made.</li>
+  <li>Anonymous usage analytics (TelemetryDeck) and crash reports (Sentry), without personal data.</li>
+  <li>Delete your account anytime in <em>Settings → Delete account</em>; everything is permanently erased and Sign in with Apple access is revoked. Other requests: <a href="mailto:[CONTACT EMAIL]">[CONTACT EMAIL]</a>.</li>
+  <li>The app is not directed to children under 13.</li>
+</ul>
+</main>
+</body>
+</html>
