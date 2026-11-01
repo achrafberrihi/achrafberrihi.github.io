@@ -7,6 +7,7 @@ This project is a simple web scraper that collects recipe information from a Mor
 - Scrapes multiple recipe pages for titles, ingredients, and instructions.
 - Uses BeautifulSoup for HTML parsing.
 - Saves extracted data to a CSV file.
+- Timeouts, a descriptive User-Agent, and per-page error handling so one bad page does not stop the run.
 - Handles polite scraping with delays between requests.
 
 ## Files
@@ -15,7 +16,7 @@ This project is a simple web scraper that collects recipe information from a Mor
 
 ## Usage
 
-1. Install dependencies (`requests`, `beautifulsoup4`, `pandas`).
-2. Set the base URL and number of pages to scrape in `scraper.py`.
-3. Run the script: `python scraper.py`.
+1. Install dependencies: `pip install -r ../requirements.txt`.
+2. Set `BASE_URL` and the CSS `SELECTORS` for the target site in `scraper.py`, and check its robots.txt and terms of use.
+3. Run: `python scraper.py --pages 5 --delay 2 --out recipes.csv`.
 4. Find your scraped data in `recipes.csv`.
