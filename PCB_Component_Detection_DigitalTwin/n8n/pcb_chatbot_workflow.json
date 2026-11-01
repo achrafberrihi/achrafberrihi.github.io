@@ -1,0 +1,147 @@
+{
+  "name": "PCB Circuit Chatbot: explanation and optimization",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "pcb-chat",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "1c93d3ce-8c2b-5868-a8cd-49fe43d34545",
+      "name": "Receive question",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        300
+      ],
+      "webhookId": "2ac8206f-b558-5922-a033-dea9914ec380"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Builds the conversation for a follow-up question about an analyzed board\nconst body = $input.first().json.body || {};\nconst context = 'PCB analysis:\\n```json\\n' + JSON.stringify(body.analysis || {}, null, 1) + '\\n```';\nconst history = Array.isArray(body.history) ? body.history : [];\nconst messages = history.length\n  ? [{ role: 'user', content: context }, { role: 'assistant', content: 'Analysis received.' }, ...history,\n     { role: 'user', content: body.question || 'Continue.' }]\n  : [{ role: 'user', content: context + '\\n\\n' + (body.question || 'Explain this circuit.') }];\nreturn [{ json: { messages } }];\n"
+      },
+      "id": "4a26d485-3137-5975-827c-73e965502ef6",
+      "name": "Build conversation",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $env.ANTHROPIC_API_KEY }}"
+            },
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ model: $env.LLM_MODEL || 'claude-haiku-5-5', max_tokens: 1024, system: \"You are an electronics design assistant reviewing a PCB from automated component detection.\\n\\nYou receive a JSON analysis: bill of materials, components with reference designators, positions\\nin pixels, detection confidence, and design-check findings.\\n\\nRules:\\n- Base every statement on the analysis. Detection can be wrong: when confidence is below 60 % or a\\n  finding says \\\"review\\\", say it needs visual confirmation instead of asserting it.\\n- Explain what the circuit most likely does from its parts (e.g. MCU + crystal + decoupling caps +\\n  USB connector = microcontroller board), and say how confident you are.\\n- Give concrete, prioritized optimizations: decoupling, current limiting, placement, thermal,\\n  manufacturability (DFM), and testability. Reference designators in every suggestion.\\n- Never invent component values or part numbers that aren't in the data. Suggest typical values only\\n  when clearly labelled as typical (e.g. \\\"typically 100 nF\\\").\\n- Be concise: short paragraphs and bullet points. Answer in the user's language.\", messages: $json.messages }) }}",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "fc81975e-2124-55ab-ae89-7c92f36ad14d",
+      "name": "LLM circuit chatbot",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        480,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const llm = $input.first().json;\nconst answer = (llm.content || []).map(b => b.text || '').join('');\nconst asked = $('Build conversation').first().json.messages;\nreturn [{ json: { answer, history: [...asked.slice(-1), { role: 'assistant', content: answer }] } }];\n"
+      },
+      "id": "cf0353f9-2f45-524b-b0d4-c47b1c22e8f1",
+      "name": "Format answer",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {}
+      },
+      "id": "b0ce6420-83d2-5eb3-b02f-8dfab27ce572",
+      "name": "Respond with answer",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        960,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Receive question": {
+      "main": [
+        [
+          {
+            "node": "Build conversation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build conversation": {
+      "main": [
+        [
+          {
+            "node": "LLM circuit chatbot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LLM circuit chatbot": {
+      "main": [
+        [
+          {
+            "node": "Format answer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format answer": {
+      "main": [
+        [
+          {
+            "node": "Respond with answer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "active": false
+}

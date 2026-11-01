@@ -3,3 +3,7 @@ target-version = "py310"
 
 [lint]
 select = ["E", "F", "W", "I", "B", "UP"]
+
+[lint.per-file-ignores]
+# Embedded JavaScript for the n8n Code nodes
+"PCB_Component_Detection_DigitalTwin/tools/build_n8n_workflows.py" = ["E501"]

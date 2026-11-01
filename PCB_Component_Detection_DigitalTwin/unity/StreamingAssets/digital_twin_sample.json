@@ -1,0 +1,253 @@
+{
+  "schema": "pcb-digital-twin/1",
+  "board": {
+    "name": "pcb",
+    "width_mm": 100.0,
+    "height_mm": 75.0
+  },
+  "quality_score": 75,
+  "components": [
+    {
+      "ref": "U1",
+      "type": "ic",
+      "prefab": "IC_QFP",
+      "x_mm": 20.31,
+      "y_mm": 55.47,
+      "width_mm": 7.81,
+      "length_mm": 6.25,
+      "rotation_deg": 0.0,
+      "status": "issue",
+      "color": "#D64545",
+      "confidence": 0.93,
+      "notes": [
+        "no decoupling capacitor detected near the supply pins"
+      ]
+    },
+    {
+      "ref": "R1",
+      "type": "resistor",
+      "prefab": "Resistor_0805",
+      "x_mm": 82.81,
+      "y_mm": 60.94,
+      "width_mm": 2.81,
+      "length_mm": 1.25,
+      "rotation_deg": 0.0,
+      "status": "ok",
+      "color": "#2E9E6A",
+      "confidence": 0.92,
+      "notes": []
+    },
+    {
+      "ref": "R2",
+      "type": "resistor",
+      "prefab": "Resistor_0805",
+      "x_mm": 82.81,
+      "y_mm": 54.69,
+      "width_mm": 2.81,
+      "length_mm": 1.25,
+      "rotation_deg": 0.0,
+      "status": "ok",
+      "color": "#2E9E6A",
+      "confidence": 0.89,
+      "notes": []
+    },
+    {
+      "ref": "D1",
+      "type": "led",
+      "prefab": "LED_0805",
+      "x_mm": 89.84,
+      "y_mm": 60.94,
+      "width_mm": 2.34,
+      "length_mm": 1.72,
+      "rotation_deg": 0.0,
+      "status": "ok",
+      "color": "#2E9E6A",
+      "confidence": 0.9,
+      "notes": []
+    },
+    {
+      "ref": "C1",
+      "type": "capacitor",
+      "prefab": "Capacitor_0805",
+      "x_mm": 43.75,
+      "y_mm": 52.34,
+      "width_mm": 2.66,
+      "length_mm": 1.41,
+      "rotation_deg": 0.0,
+      "status": "ok",
+      "color": "#2E9E6A",
+      "confidence": 0.88,
+      "notes": []
+    },
+    {
+      "ref": "U2",
+      "type": "ic",
+      "prefab": "IC_QFP",
+      "x_mm": 50.0,
+      "y_mm": 40.62,
+      "width_mm": 14.84,
+      "length_mm": 14.84,
+      "rotation_deg": 0.0,
+      "status": "ok",
+      "color": "#2E9E6A",
+      "confidence": 0.97,
+      "notes": []
+    },
+    {
+      "ref": "Y1",
+      "type": "crystal",
+      "prefab": "Crystal_HC49",
+      "x_mm": 67.19,
+      "y_mm": 40.62,
+      "width_mm": 5.47,
+      "length_mm": 2.81,
+      "rotation_deg": 0.0,
+      "status": "ok",
+      "color": "#2E9E6A",
+      "confidence": 0.91,
+      "notes": []
+    },
+    {
+      "ref": "C2",
+      "type": "capacitor",
+      "prefab": "Capacitor_0805",
+      "x_mm": 70.7,
+      "y_mm": 44.92,
+      "width_mm": 2.34,
+      "length_mm": 1.25,
+      "rotation_deg": 0.0,
+      "status": "ok",
+      "color": "#2E9E6A",
+      "confidence": 0.9,
+      "notes": []
+    },
+    {
+      "ref": "J1",
+      "type": "connector",
+      "prefab": "Connector_Header",
+      "x_mm": 5.47,
+      "y_mm": 37.5,
+      "width_mm": 7.03,
+      "length_mm": 11.72,
+      "rotation_deg": 90.0,
+      "status": "ok",
+      "color": "#2E9E6A",
+      "confidence": 0.95,
+      "notes": []
+    },
+    {
+      "ref": "D2",
+      "type": "diode",
+      "prefab": "Diode_SOD123",
+      "x_mm": 32.81,
+      "y_mm": 28.12,
+      "width_mm": 3.59,
+      "length_mm": 1.56,
+      "rotation_deg": 0.0,
+      "status": "ok",
+      "color": "#2E9E6A",
+      "confidence": 0.88,
+      "notes": []
+    },
+    {
+      "ref": "C3",
+      "type": "capacitor",
+      "prefab": "Capacitor_0805",
+      "x_mm": 59.38,
+      "y_mm": 27.34,
+      "width_mm": 2.66,
+      "length_mm": 1.41,
+      "rotation_deg": 0.0,
+      "status": "ok",
+      "color": "#2E9E6A",
+      "confidence": 0.86,
+      "notes": []
+    },
+    {
+      "ref": "C4",
+      "type": "capacitor",
+      "prefab": "Capacitor_0805",
+      "x_mm": 70.31,
+      "y_mm": 35.94,
+      "width_mm": 2.34,
+      "length_mm": 1.25,
+      "rotation_deg": 0.0,
+      "status": "review",
+      "color": "#E8A33D",
+      "confidence": 0.52,
+      "notes": [
+        "low detection confidence (52%), confirm visually"
+      ]
+    },
+    {
+      "ref": "SW1",
+      "type": "switch",
+      "prefab": "Switch_Tactile",
+      "x_mm": 92.19,
+      "y_mm": 35.94,
+      "width_mm": 5.47,
+      "length_mm": 5.47,
+      "rotation_deg": 0.0,
+      "status": "ok",
+      "color": "#2E9E6A",
+      "confidence": 0.9,
+      "notes": []
+    },
+    {
+      "ref": "D3",
+      "type": "led",
+      "prefab": "LED_0805",
+      "x_mm": 25.78,
+      "y_mm": 10.94,
+      "width_mm": 2.34,
+      "length_mm": 1.72,
+      "rotation_deg": 0.0,
+      "status": "review",
+      "color": "#E8A33D",
+      "confidence": 0.87,
+      "notes": [
+        "no series resistor detected nearby"
+      ]
+    },
+    {
+      "ref": "Q1",
+      "type": "transistor",
+      "prefab": "Transistor_SOT23",
+      "x_mm": 76.56,
+      "y_mm": 20.31,
+      "width_mm": 3.12,
+      "length_mm": 2.66,
+      "rotation_deg": 0.0,
+      "status": "ok",
+      "color": "#2E9E6A",
+      "confidence": 0.83,
+      "notes": []
+    },
+    {
+      "ref": "C5",
+      "type": "electrolytic_capacitor",
+      "prefab": "Capacitor_Electrolytic",
+      "x_mm": 89.84,
+      "y_mm": 12.5,
+      "width_mm": 6.25,
+      "length_mm": 6.25,
+      "rotation_deg": 0.0,
+      "status": "ok",
+      "color": "#2E9E6A",
+      "confidence": 0.94,
+      "notes": []
+    }
+  ],
+  "findings": [
+    {
+      "severity": "issue",
+      "ref": "U1",
+      "message": "U1: no decoupling capacitor nearby, add 100 nF close to VCC/GND"
+    },
+    {
+      "severity": "review",
+      "ref": "D3",
+      "message": "D3: check for a current-limiting resistor"
+    }
+  ]
+}
