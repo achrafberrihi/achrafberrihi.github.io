@@ -1,55 +1,79 @@
+"""Polite recipe scraper: collects titles, ingredients and steps into a CSV.
+
+Set BASE_URL and the CSS selectors for the target site, check its robots.txt
+and terms of use, then run:  python scraper.py --pages 5 --delay 2
+"""
+import argparse
+import logging
+import time
+from urllib.parse import urljoin
+
+import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-import pandas as pd
-import time
 
-# Base URL of the recipes website
-BASE_URL = 'https://www.example.com/recipes?page='
+BASE_URL = "https://www.example.com/recipes?page="
+SELECTORS = {
+    "card_link": ".recipe-card a",
+    "title": "h1",
+    "ingredients": ".ingredients li",
+    "instructions": ".instructions li",
+}
+HEADERS = {"User-Agent": "MoroccanRecipesScraper/1.0 (educational project)"}
+
+log = logging.getLogger(__name__)
+session = requests.Session()
+session.headers.update(HEADERS)
 
 
-def fetch_recipe_links(page: int) -> list:
-    """Fetches recipe links from a given page number."""
-    response = requests.get(BASE_URL + str(page))
-    soup = BeautifulSoup(response.content, 'html.parser')
-    # Find all recipe links (update the selector based on the target website)
-    links = [a['href'] for a in soup.select('.recipe-card a')]
-    return links
+def get_soup(url: str) -> BeautifulSoup:
+    response = session.get(url, timeout=15)
+    response.raise_for_status()
+    return BeautifulSoup(response.content, "html.parser")
+
+
+def fetch_recipe_links(page: int) -> list[str]:
+    url = f"{BASE_URL}{page}"
+    soup = get_soup(url)
+    return list(dict.fromkeys(urljoin(url, a["href"]) for a in soup.select(SELECTORS["card_link"]) if a.get("href")))
 
 
 def parse_recipe(url: str) -> dict:
-    """Parses a single recipe page and extracts relevant information."""
-    response = requests.get(url)
-    soup = BeautifulSoup(response.content, 'html.parser')
-    title = soup.select_one('h1').get_text(strip=True)
-    ingredients = [li.get_text(strip=True) for li in soup.select('.ingredients li')]
-    instructions = [step.get_text(strip=True) for step in soup.select('.instructions li')]
+    soup = get_soup(url)
+    title = soup.select_one(SELECTORS["title"])
     return {
-        'title': title,
-        'ingredients': ingredients,
-        'instructions': instructions,
-        'url': url
+        "title": title.get_text(strip=True) if title else "",
+        "ingredients": " | ".join(li.get_text(strip=True) for li in soup.select(SELECTORS["ingredients"])),
+        "instructions": " | ".join(li.get_text(strip=True) for li in soup.select(SELECTORS["instructions"])),
+        "url": url,
     }
 
 
-def scrape_recipes(pages: int = 1, delay: float = 1.0) -> list:
-    """Scrapes multiple pages of recipes and returns a list of recipe data."""
-    all_recipes = []
+def scrape_recipes(pages: int = 1, delay: float = 1.0) -> list[dict]:
+    recipes = []
     for page in range(1, pages + 1):
-        recipe_links = fetch_recipe_links(page)
-        for link in recipe_links:
-            recipe_data = parse_recipe(link)
-            all_recipes.append(recipe_data)
-            time.sleep(delay)  # respectful scraping delay
-    return all_recipes
+        try:
+            links = fetch_recipe_links(page)
+        except requests.RequestException as exc:
+            log.warning("Skipping page %s: %s", page, exc)
+            continue
+        for link in links:
+            try:
+                recipes.append(parse_recipe(link))
+            except requests.RequestException as exc:
+                log.warning("Skipping %s: %s", link, exc)
+            time.sleep(delay)  # be respectful to the server
+    return recipes
 
 
-def save_to_csv(recipes: list, filename: str = 'recipes.csv') -> None:
-    """Saves scraped recipes to a CSV file."""
-    df = pd.DataFrame(recipes)
-    df.to_csv(filename, index=False)
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
+    parser = argparse.ArgumentParser(description="Scrape recipes into a CSV file.")
+    parser.add_argument("--pages", type=int, default=5)
+    parser.add_argument("--delay", type=float, default=2.0)
+    parser.add_argument("--out", default="recipes.csv")
+    args = parser.parse_args()
 
-
-if __name__ == '__main__':
-    # Scrape the first 5 pages with a 2-second delay between requests
-    recipes = scrape_recipes(pages=5, delay=2.0)
-    save_to_csv(recipes)
+    data = scrape_recipes(pages=args.pages, delay=args.delay)
+    pd.DataFrame(data).to_csv(args.out, index=False)
+    log.info("Saved %d recipes to %s", len(data), args.out)
