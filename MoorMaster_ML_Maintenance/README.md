@@ -16,7 +16,7 @@ This project demonstrates a predictive maintenance workflow for a mooring system
 ## Usage
 
 1. Install dependencies (e.g. `pandas`, `scikit‑learn`).
-2. Prepare your dataset (CSV format recommended) with a binary target indicating failure or normal operation.
-3. Run `sample_code.py` and adjust the paths and parameters as needed.
+2. Prepare a CSV of numeric sensor features with a binary label column (default name `failure`).
+3. Run `python sample_code.py data.csv --target failure --model logistic` (or `--model decision_tree`).
 
 The script is intended as a starting point. Feel free to expand upon it, add more sophisticated models, or integrate with real‑time data pipelines.
