@@ -5,3 +5,5 @@ Prompt_Engineering_Demos/results/
 .venv/
 .env
 .DS_Store
+Air_Quality_Anomaly_PowerBI/data/
+PCB_Component_Detection_DigitalTwin/output/

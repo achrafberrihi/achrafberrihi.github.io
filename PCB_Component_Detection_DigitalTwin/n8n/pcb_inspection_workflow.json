@@ -1,0 +1,196 @@
+{
+  "name": "PCB Inspection: YOLO (Roboflow) + Circuit Analysis + LLM + Digital Twin",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "pcb-inspect",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "e2dfb599-f13e-5329-b5f3-8318c13cf118",
+      "name": "Receive board image",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        300
+      ],
+      "webhookId": "0f763eca-54e7-5901-a903-e2e3a6a3a760"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ ($env.ROBOFLOW_API_URL || 'https://detect.roboflow.com') + '/' + $env.ROBOFLOW_MODEL + '/' + $env.ROBOFLOW_VERSION }}",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "api_key",
+              "value": "={{ $env.ROBOFLOW_API_KEY }}"
+            },
+            {
+              "name": "image",
+              "value": "={{ $json.body.image_url }}"
+            },
+            {
+              "name": "confidence",
+              "value": "40"
+            },
+            {
+              "name": "overlap",
+              "value": "30"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "bb1f0234-d7c2-5715-87f0-851b61ed7fe4",
+      "name": "Roboflow YOLO inference",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Port of pcb_inspector/analysis.py + twin.py for n8n\nconst req = $('Receive board image').first().json.body || {};\nconst rf = $input.first().json;\nconst W = rf.image?.width || 1, H = rf.image?.height || 1;\nconst canon = { 'res':'resistor','resistor':'resistor','cap':'capacitor','capacitor':'capacitor',\n  'ceramic capacitor':'capacitor','electrolytic capacitor':'electrolytic_capacitor','electrolytic':'electrolytic_capacitor',\n  'ic':'ic','chip':'ic','microcontroller':'ic','integrated circuit':'ic','transistor':'transistor','mosfet':'transistor',\n  'diode':'diode','led':'led','inductor':'inductor','coil':'inductor','connector':'connector','header':'connector',\n  'usb':'connector','crystal':'crystal','oscillator':'crystal','button':'switch','switch':'switch' };\nconst prefix = { resistor:'R', capacitor:'C', electrolytic_capacitor:'C', ic:'U', transistor:'Q', diode:'D', led:'D',\n  inductor:'L', connector:'J', crystal:'Y', switch:'SW' };\nconst prefab = { resistor:'Resistor_0805', capacitor:'Capacitor_0805', electrolytic_capacitor:'Capacitor_Electrolytic',\n  ic:'IC_QFP', transistor:'Transistor_SOT23', diode:'Diode_SOD123', led:'LED_0805', inductor:'Inductor_SMD',\n  connector:'Connector_Header', crystal:'Crystal_HC49', switch:'Switch_Tactile' };\nconst colors = { ok:'#2E9E6A', review:'#E8A33D', issue:'#D64545' };\nconst rank = { ok:0, review:1, issue:2 };\n\nconst preds = (rf.predictions || []).map(p => ({ ...p, type: canon[p.class.trim().toLowerCase()] || p.class.trim().toLowerCase() }));\nconst rowH = Math.max(1, ...preds.map(p => p.height));\npreds.sort((a, b) => Math.round(a.y / rowH) - Math.round(b.y / rowH) || a.x - b.x);\nconst counters = {};\nconst comps = preds.map(p => {\n  const pre = prefix[p.type] || 'X';\n  counters[pre] = (counters[pre] || 0) + 1;\n  return { ref: pre + counters[pre], type: p.type, confidence: p.confidence, x: p.x, y: p.y,\n           width: p.width, height: p.height, status: 'ok', notes: [] };\n});\nconst flag = (c, s, n) => { if (rank[s] > rank[c.status]) c.status = s; c.notes.push(n); };\nconst dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);\nconst findings = [];\nconst caps = comps.filter(c => c.type.includes('capacitor'));\nconst resistors = comps.filter(c => c.type === 'resistor');\n\ncomps.filter(c => c.confidence < 0.6).forEach(c => flag(c, 'review', `low detection confidence (${Math.round(c.confidence*100)}%), confirm visually`));\ncomps.filter(c => c.type === 'ic').forEach(ic => {\n  const reach = 1.5 * Math.hypot(ic.width, ic.height);\n  if (!caps.some(cap => dist(ic, cap) <= reach)) {\n    flag(ic, 'issue', 'no decoupling capacitor detected near the supply pins');\n    findings.push({ severity: 'issue', ref: ic.ref, message: `${ic.ref}: no decoupling capacitor nearby, add 100 nF close to VCC/GND` });\n  }\n});\ncomps.filter(c => c.type === 'led').forEach(led => {\n  const reach = 4 * Math.max(led.width, led.height);\n  if (!resistors.some(r => dist(led, r) <= reach)) {\n    flag(led, 'review', 'no series resistor detected nearby');\n    findings.push({ severity: 'review', ref: led.ref, message: `${led.ref}: check for a current-limiting resistor` });\n  }\n});\nconst expected = req.expected_bom || null;\nconst bom = {};\ncomps.forEach(c => bom[c.type] = (bom[c.type] || 0) + 1);\nif (expected) for (const [t, q] of Object.entries(expected)) {\n  const f = bom[t] || 0;\n  if (f < q) findings.push({ severity: 'issue', ref: t, message: `missing ${q - f} x ${t} vs expected BOM` });\n}\nconst nIssue = comps.filter(c => c.status === 'issue').length, nReview = comps.filter(c => c.status === 'review').length;\nconst analysis = { image: { width: W, height: H }, component_count: comps.length, bom, components: comps, findings,\n  quality_score: Math.max(0, 100 - 15 * nIssue - 5 * nReview), needs_human_review: nIssue + nReview > 0 };\n\nconst boardW = Number(req.board_width_mm || 100), scale = boardW / W, boardH = H * scale;\nconst twin = { schema: 'pcb-digital-twin/1', board: { name: req.board_name || 'pcb', width_mm: boardW, height_mm: +boardH.toFixed(2) },\n  quality_score: analysis.quality_score, findings,\n  components: comps.map(c => ({ ref: c.ref, type: c.type, prefab: prefab[c.type] || 'Generic_Component',\n    x_mm: +(c.x * scale).toFixed(2), y_mm: +(boardH - c.y * scale).toFixed(2),\n    width_mm: +(c.width * scale).toFixed(2), length_mm: +(c.height * scale).toFixed(2),\n    rotation_deg: c.height > c.width * 1.3 ? 90 : 0, status: c.status, color: colors[c.status],\n    confidence: c.confidence, notes: c.notes })) };\n\nreturn [{ json: { analysis, digital_twin: twin, question: req.question || 'Explain what this circuit does and list the top optimizations.' } }];\n"
+      },
+      "id": "4e3fabd9-eb80-5158-92bf-5d9732b13dee",
+      "name": "Analyze circuit",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $env.ANTHROPIC_API_KEY }}"
+            },
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ model: $env.LLM_MODEL || 'claude-haiku-5-5', max_tokens: 1024, system: \"You are an electronics design assistant reviewing a PCB from automated component detection.\\n\\nYou receive a JSON analysis: bill of materials, components with reference designators, positions\\nin pixels, detection confidence, and design-check findings.\\n\\nRules:\\n- Base every statement on the analysis. Detection can be wrong: when confidence is below 60 % or a\\n  finding says \\\"review\\\", say it needs visual confirmation instead of asserting it.\\n- Explain what the circuit most likely does from its parts (e.g. MCU + crystal + decoupling caps +\\n  USB connector = microcontroller board), and say how confident you are.\\n- Give concrete, prioritized optimizations: decoupling, current limiting, placement, thermal,\\n  manufacturability (DFM), and testability. Reference designators in every suggestion.\\n- Never invent component values or part numbers that aren't in the data. Suggest typical values only\\n  when clearly labelled as typical (e.g. \\\"typically 100 nF\\\").\\n- Be concise: short paragraphs and bullet points. Answer in the user's language.\", messages: [{ role: 'user', content: 'PCB analysis:\\n' + JSON.stringify($json.analysis, null, 1) + '\\n\\n' + $json.question }] }) }}",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "306a6a87-beec-5d7d-bb94-8d7c3c3f2826",
+      "name": "LLM circuit explanation",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        720,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const prev = $('Analyze circuit').first().json;\nconst llm = $input.first().json;\nconst explanation = (llm.content || []).map(b => b.text || '').join('') || llm.choices?.[0]?.message?.content || '';\nreturn [{ json: { ...prev.analysis, explanation, digital_twin: prev.digital_twin } }];\n"
+      },
+      "id": "372f8f59-df46-59a6-b3ee-93f9f3028c52",
+      "name": "Build response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {}
+      },
+      "id": "cff4d54c-8a36-5850-b363-48ef739d75b2",
+      "name": "Respond with analysis",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1200,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Receive board image": {
+      "main": [
+        [
+          {
+            "node": "Roboflow YOLO inference",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Roboflow YOLO inference": {
+      "main": [
+        [
+          {
+            "node": "Analyze circuit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Analyze circuit": {
+      "main": [
+        [
+          {
+            "node": "LLM circuit explanation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LLM circuit explanation": {
+      "main": [
+        [
+          {
+            "node": "Build response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build response": {
+      "main": [
+        [
+          {
+            "node": "Respond with analysis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "active": false
+}
