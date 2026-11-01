@@ -1,0 +1,20 @@
+Extract the fields below from the invoice text and return ONLY a JSON object.
+
+Schema:
+{
+  "vendor": string | null,
+  "invoice_number": string | null,
+  "date": string | null,        // ISO 8601 (YYYY-MM-DD)
+  "total": number | null,       // numeric, no currency symbol
+  "currency": string | null     // ISO 4217 code, e.g. "MAD", "EUR"
+}
+
+Rules:
+- Use null when a field is not explicitly present. Never infer or invent values.
+- Copy identifiers exactly as written.
+- Do not wrap the JSON in markdown fences or add commentary.
+
+Invoice text:
+"""
+{text}
+"""
