@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+*.csv
+Prompt_Engineering_Demos/results/
+.venv/
+.env
+.DS_Store

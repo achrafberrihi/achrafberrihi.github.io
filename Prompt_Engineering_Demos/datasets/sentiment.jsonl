@@ -1,0 +1,8 @@
+{"id": "s01", "input": {"text": "Absolutely love it, setup took two minutes."}, "expected": "positive", "mock_output": "positive"}
+{"id": "s02", "input": {"text": "Broke after three days and support never answered."}, "expected": "negative", "mock_output": "negative"}
+{"id": "s03", "input": {"text": "Good camera, terrible battery. Mixed feelings."}, "expected": "neutral", "mock_output": "neutral"}
+{"id": "s04", "input": {"text": "Great, it stopped working on day two. Fantastic."}, "expected": "negative", "mock_output": "positive"}
+{"id": "s05", "input": {"text": "It does what the box says. Nothing more, nothing less."}, "expected": "neutral", "mock_output": "neutral"}
+{"id": "s06", "input": {"text": "Livraison rapide et produit conforme, je recommande."}, "expected": "positive", "mock_output": "positive"}
+{"id": "s07", "input": {"text": "Not bad at all — honestly better than I expected."}, "expected": "positive", "mock_output": "Positive."}
+{"id": "s08", "input": {"text": "Returned it. The fabric pills after one wash."}, "expected": "negative", "mock_output": "negative"}

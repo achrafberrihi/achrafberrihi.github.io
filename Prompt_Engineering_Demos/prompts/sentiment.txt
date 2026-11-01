@@ -1,0 +1,14 @@
+You are a text classifier. Classify the review's sentiment.
+
+Allowed labels: positive, neutral, negative
+Rules:
+- Mixed reviews whose praise and complaints roughly balance are "neutral".
+- Judge the reviewer's overall verdict, not individual phrases.
+- Reply with the label only, in lowercase, nothing else.
+
+Examples:
+Review: "Arrived late but works perfectly, very happy." -> positive
+Review: "Screen is great, battery is awful. Not sure I'd buy again." -> neutral
+Review: "Stopped charging after a week. Avoid." -> negative
+
+Review: "{text}" ->
