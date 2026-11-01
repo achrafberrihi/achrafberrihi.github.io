@@ -7,6 +7,7 @@ LLM evaluation & benchmarking · HITL data operations · Agentic automation · E
   <a href="https://www.linkedin.com/in/achraf-berrihi"><img src="https://img.shields.io/badge/LinkedIn-achraf--berrihi-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
   <a href="mailto:achraf-berrihi@hotmail.com"><img src="https://img.shields.io/badge/Email-achraf--berrihi@hotmail.com-0D1117?style=for-the-badge&logo=maildotru&logoColor=white"/></a>
 </p>
+<p align="center"><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/actions/workflows/ci.yml"><img src="https://github.com/achrafberrihi/achrafberrihi.github.io/actions/workflows/ci.yml/badge.svg" alt="CI"/></a></p>
 <p align="center">📍 Casablanca, Morocco — open to remote & relocation</p>
 
 ---
@@ -31,11 +32,19 @@ Full experience on the [portfolio](https://achrafberrihi.github.io/#experience).
 | Project | What it is | Stack |
 |---|---|---|
 | [Intelligent Calendar](https://achrafberrihi.github.io/intelligent-calendar/privacy.html) | iOS calendar & task app with an AI scheduling assistant — privacy policy and terms hosted here | iOS · LLM · Supabase |
-| [`MoorMaster_ML_Maintenance`](./MoorMaster_ML_Maintenance) | Predictive-maintenance workflow on industrial sensor data | Python · scikit-learn |
-| [`Prompt_Engineering_Demos`](./Prompt_Engineering_Demos) | Annotated prompt patterns for classification, summarisation, generation | LLMs |
+| [`Prompt_Engineering_Demos`](./Prompt_Engineering_Demos) | 95 prompts across 19 niches + an LLM evaluation harness (Claude / GPT) with adversarial test sets | Python · LLMs |
+| [`MoorMaster_ML_Maintenance`](./MoorMaster_ML_Maintenance) | Predictive maintenance on mooring telemetry: leak-free pipeline, imbalance handling, model comparison | Python · scikit-learn |
 | [`Moroccan_Recipes_Scraper`](./Moroccan_Recipes_Scraper) | Polite scraper turning recipe pages into a structured dataset | Python · BeautifulSoup |
 
-The portfolio site itself is a single static `index.html` served by GitHub Pages.
+Run everything locally:
+
+```bash
+pip install -r requirements.txt
+pytest -q                                        # unit tests
+python Prompt_Engineering_Demos/eval_harness.py  # LLM eval report (offline)
+```
+
+GitHub Actions runs linting, tests and the eval harness on every push. The portfolio site itself is a single static `index.html` served by GitHub Pages.
 
 ## Toolbox
 

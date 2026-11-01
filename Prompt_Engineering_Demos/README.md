@@ -1,14 +1,58 @@
-# Prompt Engineering Demos
+# Prompt Engineering & LLM Evaluation
 
-This folder contains examples of prompt designs and experiments for large language models (LLMs) such as GPT-4 and LLaMA. Each example showcases different strategies for eliciting desired responses from the model.
+A library of **95 prompts across 19 niches** and 7 in-depth prompt patterns, plus a small harness that **measures** them on labelled data — because a prompt isn't finished until it has been evaluated.
 
-## Contents
+## What's inside
 
-- `example_prompts.md` – A markdown file with curated prompts, their rationale, and expected outputs.
-- Additional scripts or notebooks can be added here for evaluation or fine-tuning experiments.
+| Path | Contents |
+|---|---|
+| [`example_prompts.md`](./example_prompts.md) | Index of **95 prompts across 19 niches** + 7 core patterns explained in depth (classification, JSON extraction, RAG, LLM-as-a-judge, red-team labels, ASR QA, agent tool contracts) |
+| [`niches/`](./niches) | One file per field: LLM evaluation, data ops, red teaming, RAG, agents, speech/ASR, vision, data/SQL, software, Edge AI, industrial/electrical, marketing, support, education, healthcare, finance, legal, HR, localization (FR/AR/Darija) |
+| `prompts/` | Prompt templates used by the harness |
+| `datasets/` | Labelled test cases (JSONL), including adversarial ones: sarcasm, French input, missing fields, prompt injection inside a document |
+| [`eval_harness.py`](./eval_harness.py) | Runs templates over datasets, scores outputs, reports accuracy and every failure |
+| `test_eval_harness.py` | Unit tests for templating and scorers |
 
-## How to Use
+## Run it
 
-Use these prompts as inspiration when interacting with LLMs. Feel free to modify them for your own projects or integrate them into automated pipelines. Notes are provided alongside each prompt explaining why it works and what adjustments might improve the output.
+```bash
+pip install -r ../requirements.txt
 
-Contributions and suggestions are welcome!
+# Offline: replays recorded model outputs, no API key needed
+python eval_harness.py
+
+# Against a real model
+export ANTHROPIC_API_KEY=...      # or OPENAI_API_KEY
+python eval_harness.py --model anthropic:claude-haiku-5-5
+python eval_harness.py --model openai:gpt-4o-mini --task sentiment --save results/run.json
+```
+
+Sample report (recorded outputs, which include deliberate mistakes to show failure analysis):
+
+```text
+task                    cases    score   perfect
+------------------------------------------------
+sentiment                   8    87.5%     7/8
+invoice_extraction          3    93.3%     2/3
+
+Failures:
+  [sentiment/s04] score=0.00  got 'positive'
+  [invoice_extraction/i02] score=0.80  invoice_number: got 'R-0001', want None
+
+Overall: 89.1%
+```
+
+The two failures are exactly the cases the dataset was built to catch: a **sarcastic** review read literally, and a **hallucinated invoice number** where the document had none.
+
+## How scoring works
+
+- **`exact`** — label classification; case, whitespace and trailing punctuation are ignored so format drift ("Positive.") isn't confused with a wrong answer.
+- **`json_fields`** — field-level accuracy for extraction. Tolerates markdown fences, compares numbers numerically, and counts an invented value where `null` was expected as an error.
+
+## Adding a task
+
+1. Write a template in `prompts/` using `{placeholders}` (JSON braces are left untouched).
+2. Add cases to `datasets/<task>.jsonl`: `{"id", "input": {...}, "expected": ...}`.
+3. Register it in `TASKS` in `eval_harness.py` with a scorer.
+
+Use `--min-score 0.9` in CI to fail a build when a prompt change causes a regression.
