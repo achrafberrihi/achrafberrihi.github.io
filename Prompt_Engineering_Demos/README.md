@@ -1,12 +1,13 @@
 # Prompt Engineering & LLM Evaluation
 
-A library of production-oriented prompt patterns, plus a small harness that **measures** them on labelled data — because a prompt isn't finished until it has been evaluated.
+A library of **95 prompts across 19 niches** and 7 in-depth prompt patterns, plus a small harness that **measures** them on labelled data — because a prompt isn't finished until it has been evaluated.
 
 ## What's inside
 
 | Path | Contents |
 |---|---|
-| [`example_prompts.md`](./example_prompts.md) | 7 patterns with rationale and failure modes to test: constrained classification, JSON extraction, grounded RAG answers, LLM-as-a-judge, safety-response classification for red teaming, ASR transcript QA, agent tool contracts |
+| [`example_prompts.md`](./example_prompts.md) | Index of **95 prompts across 19 niches** + 7 core patterns explained in depth (classification, JSON extraction, RAG, LLM-as-a-judge, red-team labels, ASR QA, agent tool contracts) |
+| [`niches/`](./niches) | One file per field: LLM evaluation, data ops, red teaming, RAG, agents, speech/ASR, vision, data/SQL, software, Edge AI, industrial/electrical, marketing, support, education, healthcare, finance, legal, HR, localization (FR/AR/Darija) |
 | `prompts/` | Prompt templates used by the harness |
 | `datasets/` | Labelled test cases (JSONL), including adversarial ones: sarcasm, French input, missing fields, prompt injection inside a document |
 | [`eval_harness.py`](./eval_harness.py) | Runs templates over datasets, scores outputs, reports accuracy and every failure |

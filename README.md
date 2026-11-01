@@ -32,7 +32,7 @@ Full experience on the [portfolio](https://achrafberrihi.github.io/#experience).
 | Project | What it is | Stack |
 |---|---|---|
 | [Intelligent Calendar](https://achrafberrihi.github.io/intelligent-calendar/privacy.html) | iOS calendar & task app with an AI scheduling assistant — privacy policy and terms hosted here | iOS · LLM · Supabase |
-| [`Prompt_Engineering_Demos`](./Prompt_Engineering_Demos) | 7 production prompt patterns + an LLM evaluation harness (Claude / GPT) with adversarial test sets | Python · LLMs |
+| [`Prompt_Engineering_Demos`](./Prompt_Engineering_Demos) | 95 prompts across 19 niches + an LLM evaluation harness (Claude / GPT) with adversarial test sets | Python · LLMs |
 | [`MoorMaster_ML_Maintenance`](./MoorMaster_ML_Maintenance) | Predictive maintenance on mooring telemetry: leak-free pipeline, imbalance handling, model comparison | Python · scikit-learn |
 | [`Moroccan_Recipes_Scraper`](./Moroccan_Recipes_Scraper) | Polite scraper turning recipe pages into a structured dataset | Python · BeautifulSoup |
 
