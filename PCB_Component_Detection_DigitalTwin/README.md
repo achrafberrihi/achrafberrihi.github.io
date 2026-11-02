@@ -2,7 +2,7 @@
 
 An automated inspection pipeline for electronic boards: a **YOLO** model hosted on **Roboflow** detects the components, a circuit analysis builds the bill of materials and runs design checks, an **LLM chatbot** explains the circuit and suggests optimizations, and a **Unity digital twin** rebuilds the board in 3D. The whole flow is orchestrated by **n8n** workflows.
 
-![Detected components]
+
 
 ## Architecture
 
