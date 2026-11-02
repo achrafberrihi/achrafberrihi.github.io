@@ -28,7 +28,7 @@
   "address": {"@type": "PostalAddress", "addressLocality": "Casablanca", "addressCountry": "MA"},
   "sameAs": ["https://www.linkedin.com/in/achraf-berrihi", "https://github.com/achrafberrihi"],
   "alumniOf": ["EMSI", "ENSEM Casablanca", "ISIC"],
-  "knowsAbout": ["LLM evaluation", "AI data operations", "Human-in-the-loop", "RLHF", "Agentic AI", "Edge AI", "Embedded systems", "Predictive maintenance"]
+  "knowsAbout": ["LLM evaluation", "AI data operations", "Human-in-the-loop", "RLHF", "Agentic AI", "Edge AI", "Embedded systems", "Predictive maintenance", "Industrial automation", "SCADA", "Smart grids", "Renewable energy", "Computer vision", "Power BI"]
 }
 </script>
 <style>
@@ -117,6 +117,7 @@ h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.02em;line-height:1.1;margin:0
 .project .tags{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
 .tag{font:12px var(--mono);padding:3px 8px;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
 .project .links{margin-top:auto;padding-top:18px;display:flex;gap:16px;font:13px var(--mono)}
+.xp p a{color:var(--accent);text-decoration:none}
 .project .links a{color:var(--accent);text-decoration:none} .project .links a:hover{text-decoration:underline}
 .project.featured{grid-column:span 2;background:linear-gradient(135deg,var(--accent-soft),transparent 60%),var(--bg-2)}
 @media (max-width:620px){ .project.featured{grid-column:auto} }
@@ -131,6 +132,8 @@ h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.02em;line-height:1.1;margin:0
 .edu{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
 .edu .when{font:13px var(--mono);color:var(--muted);padding-top:3px}
 .edu h4{margin:0;font-size:17px} .edu p{margin:2px 0 0;color:var(--muted);font-size:15px}
+.edu .course{margin-top:8px;font-size:14px}
+.edu .course b{color:var(--text);font-weight:600}
 @media (max-width:620px){ .edu{grid-template-columns:1fr;gap:4px} }
 
 /* contact */
@@ -152,10 +155,10 @@ footer a{color:var(--muted)}
     <a class="brand" href="#top">achraf<span>.</span>berrihi</a>
     <nav aria-label="Main">
       <ul>
-        <li><a href="#focus">Focus</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -169,7 +172,7 @@ footer a{color:var(--muted)}
       <span class="status"><i></i>Casablanca, Morocco · Open to remote &amp; relocation</span>
       <h1>Achraf Berrihi</h1>
       <p class="role">AI Data Operations Lead · AI &amp; Intelligent Systems Engineer</p>
-      <p class="lead">State Engineer in Electrical Engineering &amp; Intelligent Systems. I make AI models <strong>measurably better</strong>: leading human-in-the-loop data workflows, <strong>benchmarking and red-teaming LLMs</strong>, building agentic automation, and shipping <strong>Edge AI</strong> on resource-constrained hardware.</p>
+      <p class="lead">Final-year State Engineering student in Electrical Engineering &amp; Intelligent Systems. I make AI models <strong>measurably better</strong> by leading human-in-the-loop data workflows and <strong>benchmarking and red-teaming LLMs</strong>, and I build agentic automation, <strong>Edge AI</strong> and industrial systems, from SCADA and smart grids to computer vision.</p>
       <div class="ctas">
         <a class="btn primary" href="mailto:achraf-berrihi@hotmail.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Get in touch</a>
@@ -177,6 +180,10 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v5.45h-4v-4.83c0-1.15-.02-2.64-1.6-2.64-1.62 0-1.86 1.26-1.86 2.56v4.91h-4v-11Z"/></svg>LinkedIn</a>
         <a class="btn" href="https://github.com/achrafberrihi" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>GitHub</a>
+        <a class="btn" href="cv/Achraf_Berrihi_CV_EN.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>CV (EN)</a>
+        <a class="btn" href="cv/Achraf_Berrihi_CV_FR.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>CV (FR)</a>
       </div>
     </div>
   </div>
@@ -185,7 +192,7 @@ footer a{color:var(--muted)}
     <div class="stats">
       <div class="stat"><b>15+</b><span>AI &amp; data platforms worked with</span></div>
       <div class="stat"><b>7 yrs</b><span>engineering since 2019</span></div>
-      <div class="stat"><b>4</b><span>domains: LLM · Data Ops · Agents · Edge</span></div>
+      <div class="stat"><b>8</b><span>open-source projects on GitHub</span></div>
       <div class="stat"><b>3</b><span>diplomas: engineer · bachelor · technician</span></div>
     </div>
   </div>
@@ -199,110 +206,7 @@ footer a{color:var(--muted)}
         <div class="card"><span class="idx">01</span><h3>LLM Evaluation &amp; Benchmarking</h3><p>Structured eval loops, scoring rubrics, programmatic labeling, RLHF evaluation and red teaming for safety, factuality and instruction following.</p></div>
         <div class="card"><span class="idx">02</span><h3>AI Data Operations</h3><p>Leading HITL annotation workflows, setting quality benchmarks and guidelines, and running review cycles for large-scale training data.</p></div>
         <div class="card"><span class="idx">03</span><h3>Agentic Automation</h3><p>LLM-driven workflows that orchestrate multi-step API integrations with tool execution and structured outputs.</p></div>
-        <div class="card"><span class="idx">04</span><h3>Edge &amp; Industrial AI</h3><p>Low-latency on-device inference, embedded C/C++, sensor fusion, predictive maintenance and anomaly detection.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <div class="wrap">
-      <p class="eyebrow">// experience</p>
-      <h2>Experience</h2>
-      <p class="sub">Cross-functional work across the AI-data ecosystem, including projects for Scale AI, Snorkel AI, Innodata, Microsoft, Uber AI and micro1.</p>
-
-      <div class="xp-group">
-        <h3>Leadership &amp; AI data operations</h3>
-        <div class="xp"><div class="when">Aug 2026 — now</div><div><h4>AI Data Operations Team Lead <em>· Agents Only Technologies</em></h4><p>Lead annotation workflows, set quality benchmarks and operational standards for large-scale model training; coordinate review cycles and turn technical guidance into production-ready French workflows.</p></div></div>
-        <div class="xp"><div class="when">May 2026 — now</div><div><h4>AI Vendor Consultant <em>· DatoviaPlayHouse / Independent Partner</em></h4><p>HITL quality review, audio transcription, localization and automated pipeline validation across multilingual AI-data workflows.</p></div></div>
-        <div class="xp"><div class="when">Sep 2025 — now</div><div><h4>AI Ambassador <em>· AI 2030</em></h4><p>Promote responsible AI practices, ethical frameworks, safety protocols and model-alignment principles.</p></div></div>
-      </div>
-
-      <div class="xp-group">
-        <h3>LLM evaluation &amp; benchmarking</h3>
-        <div class="xp"><div class="when">May 2026 — now</div><div><h4>AI Benchmarking Engineer <em>· Snorkel AI</em></h4><p>Benchmark enterprise LLM behaviour through programmatic labeling and structured evaluation loops; design repeatable datasets and scoring workflows.</p></div></div>
-        <div class="xp"><div class="when">Jul 2026 — now</div><div><h4>AI Chatbot Tester <em>· Productive Playhouse</em></h4><p>Test conversational AI for safety, instruction adherence, flow and edge cases; document failure patterns.</p></div></div>
-        <div class="xp"><div class="when">Sep 2025 — now</div><div><h4>LLM Evaluator <em>· Pareto.AI</em></h4><p>Evaluate outputs on factual correctness, safety, instruction following and alignment; surface systematic failure modes.</p></div></div>
-        <div class="xp"><div class="when">Jun 2024 — now</div><div><h4>Data &amp; AI Engineer <em>· Volga Partners / Scale AI</em></h4><p>Engineer fine-tuning and evaluation datasets; assess advanced reasoning across LLM workflows.</p></div></div>
-        <div class="xp"><div class="when">Apr 2025 — now</div><div><h4>Data &amp; Prompt Engineer <em>· micro1</em></h4><p>Engineer prompt structures, enrich evaluation datasets and run iterative QC cycles for client deployments.</p></div></div>
-      </div>
-
-      <div class="xp-group">
-        <h3>Speech, multimodal &amp; data</h3>
-        <div class="xp"><div class="when">May 2026 — now</div><div><h4>AI/LLM Speech Analyst <em>· Innodata Inc.</em></h4><p>Analyse speech/audio datasets and speech-to-text behaviour; flag transcription and acoustic-quality issues for ASR/LLM pipelines.</p></div></div>
-        <div class="xp"><div class="when">Aug 2025 — now</div><div><h4>Data &amp; AI Specialist <em>· Uber AI Solutions</em></h4><p>Review high-throughput data workflows for predictive-model development with precision-focused quality controls.</p></div></div>
-        <div class="xp"><div class="when">Jul 2025 — now</div><div><h4>Creative AI Data Trainer <em>· SuperAnnotate</em></h4><p>Curate complex multimodal and generative-AI datasets to improve training-data fidelity.</p></div></div>
-        <div class="xp"><div class="when">Jul 2025 — now</div><div><h4>AI Transcription Reviewer <em>· OpenTrain AI</em></h4><p>Audit speech datasets for accuracy and linguistic quality; identify recurring ASR errors.</p></div></div>
-        <div class="xp"><div class="when">Aug — Oct 2024</div><div><h4>Data Annotator <em>· Microsoft</em></h4><p>High-precision dataset curation and annotation within enterprise quality frameworks.</p></div></div>
-      </div>
-
-      <div class="xp-group">
-        <h3>Engineering</h3>
-        <div class="xp"><div class="when">Dec 2025 — now</div><div><h4>AI Automation Developer <em>· King Caller AI</em></h4><p>Design LLM-driven business automation orchestrating multi-step API integrations, combining agentic reasoning, tool execution and structured outputs.</p></div></div>
-        <div class="xp"><div class="when">Feb — Sep 2025</div><div><h4>Embedded Systems AI Software Engineer <em>· Lillup, San Francisco</em></h4><p>Developed low-latency embedded AI applications and edge-inference pipelines for IoT hardware.</p></div></div>
-        <div class="xp"><div class="when">Mar 2024 — Aug 2025</div><div><h4>Electrical &amp; Intelligent Systems Engineer <em>· ALPHATEC MAROC</em></h4><p>Supervised industrial electromechanical operations; built smart-monitoring concepts to improve reliability and reduce downtime.</p></div></div>
-        <div class="xp"><div class="when">Jan — Mar 2019</div><div><h4>Maintenance Technician <em>· OCP Group</em></h4><p>Preventive and corrective maintenance of critical electromechanical assets.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="wrap">
-      <p class="eyebrow">// projects</p>
-      <h2>Selected projects</h2>
-      <p class="sub">From an iOS app with an AI assistant to industrial ML and evaluation tooling.</p>
-      <div class="grid g3">
-        <article class="card project featured">
-          <span class="badge">● New · 2026</span>
-          <h3>Intelligent Calendar — iOS app with an AI assistant</h3>
-          <p>An iPhone calendar and task manager whose AI assistant suggests events, tasks, free slots and schedule reorganisations. Privacy-first by design: calendar events stay on the device, assistant requests are not stored, and accounts use Sign in with Apple with tasks synced through an EU-hosted backend.</p>
-          <div class="tags"><span class="tag">iOS</span><span class="tag">LLM assistant</span><span class="tag">Supabase</span><span class="tag">Sign in with Apple</span><span class="tag">Privacy by design</span></div>
-          <div class="links"><a href="intelligent-calendar/privacy.html">Privacy policy →</a><a href="intelligent-calendar/terms.html">Terms →</a></div>
-        </article>
-        <article class="card project">
-          <h3>Predictive Intelligent Maintenance</h3>
-          <p>Failure prediction from mooring-system telemetry: leak-free pipeline, class-imbalance handling and recall-first evaluation, comparing three models on a reproducible synthetic dataset.</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">IIoT</span></div>
-          <div class="links"><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/tree/main/MoorMaster_ML_Maintenance">Code →</a></div>
-        </article>
-        <article class="card project">
-          <h3>Automated LLM Evaluation Pipeline</h3>
-          <p>A harness that runs prompts against Claude or GPT on labelled datasets — including adversarial cases like sarcasm and prompt injection — and reports accuracy and every failure. CI fails the build on regressions.</p>
-          <div class="tags"><span class="tag">LLM eval</span><span class="tag">Python</span><span class="tag">CI</span></div>
-          <div class="links"><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/blob/main/Prompt_Engineering_Demos/eval_harness.py">Code →</a></div>
-        </article>
-        <article class="card project">
-          <h3>Agentic Business Automation</h3>
-          <p>An LLM-powered agent architecture orchestrating end-to-end business processes through multi-step API workflows.</p>
-          <div class="tags"><span class="tag">Agents</span><span class="tag">Tool use</span><span class="tag">APIs</span></div>
-        </article>
-        <article class="card project">
-          <h3>Prompt Library — 95 prompts, 19 niches</h3>
-          <p>Five ready-to-adapt prompts per field, from LLM evaluation, red teaming and ASR to industrial maintenance, finance, legal and FR/AR/Darija localization — each with a note on why it works.</p>
-          <div class="tags"><span class="tag">Prompting</span><span class="tag">RAG</span><span class="tag">Red teaming</span></div>
-          <div class="links"><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/blob/main/Prompt_Engineering_Demos/example_prompts.md">Browse →</a></div>
-        </article>
-        <article class="card project">
-          <h3>Moroccan Recipes Scraper</h3>
-          <p>A polite web scraper turning recipe pages into a structured dataset (titles, ingredients, steps).</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">BeautifulSoup</span><span class="tag">Data</span></div>
-          <div class="links"><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/tree/main/Moroccan_Recipes_Scraper">Code →</a></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="wrap">
-      <p class="eyebrow">// toolbox</p>
-      <h2>Skills</h2>
-      <p class="sub">The stack behind the work.</p>
-      <div class="grid g3">
-        <div class="card skill"><h3>LLM engineering &amp; evaluation</h3><div class="chips"><span class="chip">LLM benchmarking</span><span class="chip">RLHF evaluation</span><span class="chip">Red teaming</span><span class="chip">Alignment &amp; safety</span><span class="chip">Prompt engineering</span><span class="chip">RAG</span><span class="chip">Agentic workflows</span><span class="chip">Chatbot testing</span></div></div>
-        <div class="card skill"><h3>AI operations &amp; leadership</h3><div class="chips"><span class="chip">HITL workflows</span><span class="chip">Data curation</span><span class="chip">Quality assurance</span><span class="chip">Annotation architecture</span><span class="chip">Guidelines &amp; rubrics</span><span class="chip">Vendor coordination</span></div></div>
-        <div class="card skill"><h3>Audio &amp; multimodal</h3><div class="chips"><span class="chip">ASR evaluation</span><span class="chip">Speech analysis</span><span class="chip">Transcription review</span><span class="chip">Localization</span><span class="chip">Multimodal datasets</span></div></div>
-        <div class="card skill"><h3>Embedded &amp; Edge AI</h3><div class="chips"><span class="chip">Embedded C/C++</span><span class="chip">On-device inference</span><span class="chip">Resource-constrained IoT</span><span class="chip">Sensor fusion</span></div></div>
-        <div class="card skill"><h3>Industrial intelligence</h3><div class="chips"><span class="chip">Predictive maintenance</span><span class="chip">Anomaly detection</span><span class="chip">PLC / TIA Portal</span><span class="chip">Industrial automation</span><span class="chip">MATLAB</span><span class="chip">AutoCAD Electrical</span></div></div>
-        <div class="card skill"><h3>Programming &amp; infra</h3><div class="chips"><span class="chip">Python</span><span class="chip">C/C++</span><span class="chip">SQL</span><span class="chip">scikit-learn · pandas</span><span class="chip">Docker</span><span class="chip">Linux</span><span class="chip">Git/GitHub</span><span class="chip">REST APIs</span></div></div>
+        <div class="card"><span class="idx">04</span><h3>Edge &amp; Industrial AI</h3><p>On-device inference, embedded C/C++, automation and SCADA, power systems, predictive maintenance and computer vision for inspection.</p></div>
       </div>
     </div>
   </section>
@@ -312,9 +216,127 @@ footer a{color:var(--muted)}
       <p class="eyebrow">// education</p>
       <h2>Education</h2>
       <div style="margin-top:28px">
-        <div class="edu"><div class="when">2024</div><div><h4>State Engineer — Electrical Engineering &amp; Intelligent Systems</h4><p>EMSI</p></div></div>
+        <div class="edu"><div class="when">2024 — 2027</div><div><h4>State Engineer — Electrical Engineering &amp; Intelligent Systems</h4><p>EMSI · final year, graduating 2027</p>
+          <p class="course"><b>Final year:</b> smart grids, renewable energy, SCADA supervision, lean management, project management, production management.</p>
+          <p class="course"><b>Coursework:</b> machine and deep learning, electrical installation design, power electronics, variable-speed drives, industrial networks, industrial control and state-space, smart sensors and actuators, industrial robotics, Industry 4.0 (3DEXPERIENCE), production and maintenance, supervision and digital twin, electrical networks and safety.</p></div></div>
         <div class="edu"><div class="when">2022 — 2023</div><div><h4>Bachelor's — Data &amp; AI Engineering</h4><p>ENSEM Casablanca</p></div></div>
         <div class="edu"><div class="when">2017 — 2019</div><div><h4>Specialized Technician — Electromechanical Engineering</h4><p>ISIC</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <p class="eyebrow">// experience</p>
+      <h2>Experience</h2>
+      <p class="sub">Most recent first. Cross-functional work across the AI-data ecosystem, including projects for Scale AI, Snorkel AI, Innodata, Microsoft, Uber AI and micro1, and industrial engineering at OCP Group and ALPHATEC.</p>
+        <div class="xp"><div class="when">Aug 2026 — now</div><div><h4>AI Data Operations Team Lead <em>· Agents Only Technologies</em></h4><p>Lead AI data operations and annotation workflows, setting quality benchmarks and operational standards for large-scale model training, and coordinate review cycles that turn technical guidance into production-ready French workflows.</p></div></div>
+        <div class="xp"><div class="when">Jul 2026 — now</div><div><h4>AI Chatbot Tester <em>· Productive Playhouse</em></h4><p>Test conversational AI for safety, instruction adherence, flow and edge cases, documenting failure patterns in structured evaluations.</p></div></div>
+        <div class="xp"><div class="when">Jul — Aug 2026</div><div><h4>Electrical Engineering Intern (PFA) <em>· OCP Group, Jorf Lasfar</em></h4><p>Studied the electrical system of a 25 MVA steam turbo-alternator (5.5/22 kV, about 2,624 A), its brushless excitation, AVR, synchronization and generator protection (87G, 59/27, 12, 40), and proposed ML-based predictive maintenance. <a href="https://github.com/achrafberrihi/achrafberrihi.github.io/tree/main/OCP_TurboAlternator_Study">Study →</a></p></div></div>
+        <div class="xp"><div class="when">May 2026 — now</div><div><h4>AI/LLM Speech Analyst <em>· Innodata Inc.</em></h4><p>Analyze speech and audio datasets and evaluate speech-to-text output, flagging transcription and acoustic-quality issues for ASR and LLM pipelines.</p></div></div>
+        <div class="xp"><div class="when">May 2026 — now</div><div><h4>AI Vendor Consultant <em>· DatoviaPlayHouse / Independent Partner</em></h4><p>Deliver HITL quality review, audio transcription, localization and pipeline validation across multilingual AI-data workflows.</p></div></div>
+        <div class="xp"><div class="when">May 2026 — now</div><div><h4>AI Benchmarking Engineer <em>· Snorkel AI</em></h4><p>Benchmark enterprise LLM behavior through programmatic labeling and structured evaluation loops, with repeatable datasets and scoring workflows.</p></div></div>
+        <div class="xp"><div class="when">Dec 2025 — now</div><div><h4>AI Automation Developer <em>· King Caller AI</em></h4><p>Design LLM-driven business automations that orchestrate multi-step API integrations with agentic reasoning, tool execution and structured outputs.</p></div></div>
+        <div class="xp"><div class="when">Sep 2025 — now</div><div><h4>AI Ambassador <em>· AI 2030</em></h4><p>Promote responsible AI practices, ethical frameworks, safety protocols and model-alignment principles.</p></div></div>
+        <div class="xp"><div class="when">Sep 2025 — now</div><div><h4>LLM Evaluator <em>· Pareto.AI</em></h4><p>Evaluate outputs for factual correctness, safety, instruction following and alignment, surfacing systematic failure modes.</p></div></div>
+        <div class="xp"><div class="when">Aug 2025 — now</div><div><h4>Data &amp; AI Specialist <em>· Uber AI Solutions</em></h4><p>Review high-throughput data workflows for predictive-model development with precision-focused quality controls.</p></div></div>
+        <div class="xp"><div class="when">Jul 2025 — now</div><div><h4>Creative AI Data Trainer <em>· SuperAnnotate</em></h4><p>Curate complex multimodal and generative-AI datasets to improve training-data fidelity.</p></div></div>
+        <div class="xp"><div class="when">Jul 2025 — now</div><div><h4>AI Transcription Reviewer <em>· OpenTrain AI</em></h4><p>Audit speech datasets for accuracy and linguistic quality and identify recurring ASR errors.</p></div></div>
+        <div class="xp"><div class="when">Apr 2025 — now</div><div><h4>Data &amp; Prompt Engineer <em>· micro1</em></h4><p>Engineer prompt structures, enrich evaluation datasets and run iterative QC cycles for client deployments.</p></div></div>
+        <div class="xp"><div class="when">Feb — Sep 2025</div><div><h4>Embedded Systems AI Software Engineer <em>· Lillup, San Francisco</em></h4><p>Developed low-latency embedded AI applications and edge-inference pipelines for IoT hardware.</p></div></div>
+        <div class="xp"><div class="when">Aug — Oct 2024</div><div><h4>Data Annotator <em>· Microsoft</em></h4><p>High-precision dataset curation and annotation within enterprise quality frameworks.</p></div></div>
+        <div class="xp"><div class="when">Jun 2024 — now</div><div><h4>Data &amp; AI Engineer <em>· Volga Partners / Scale AI</em></h4><p>Engineer fine-tuning and evaluation datasets and assess advanced reasoning across LLM workflows.</p></div></div>
+        <div class="xp"><div class="when">Mar 2024 — Aug 2025</div><div><h4>Electrical &amp; Intelligent Systems Engineer <em>· ALPHATEC MAROC</em></h4><p>Supervised industrial electromechanical operations and built smart-monitoring concepts to improve reliability and reduce downtime.</p></div></div>
+        <div class="xp"><div class="when">Jan — Mar 2019</div><div><h4>Maintenance Technician <em>· OCP Group</em></h4><p>Preventive and corrective maintenance of critical electromechanical assets.</p></div></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <p class="eyebrow">// toolbox</p>
+      <h2>Skills</h2>
+      <p class="sub">From LLM evaluation to power systems, the stack behind the work.</p>
+      <div class="grid g3">
+        <div class="card skill"><h3>LLM engineering &amp; evaluation</h3><div class="chips"><span class="chip">LLM benchmarking</span><span class="chip">RLHF evaluation</span><span class="chip">Red teaming</span><span class="chip">Alignment &amp; safety</span><span class="chip">Prompt engineering</span><span class="chip">RAG</span><span class="chip">Agentic workflows (n8n)</span><span class="chip">Chatbot testing</span></div></div>
+        <div class="card skill"><h3>AI operations &amp; leadership</h3><div class="chips"><span class="chip">HITL workflows</span><span class="chip">Data curation</span><span class="chip">Quality assurance</span><span class="chip">Annotation architecture</span><span class="chip">Guidelines &amp; rubrics</span><span class="chip">Vendor coordination</span></div></div>
+        <div class="card skill"><h3>ML, vision &amp; data</h3><div class="chips"><span class="chip">Machine learning</span><span class="chip">Deep learning</span><span class="chip">YOLO · Roboflow</span><span class="chip">scikit-learn · pandas</span><span class="chip">Hadoop</span><span class="chip">Apache Spark</span><span class="chip">SQL</span><span class="chip">Power BI</span></div></div>
+        <div class="card skill"><h3>Audio &amp; multimodal</h3><div class="chips"><span class="chip">ASR evaluation</span><span class="chip">Speech analysis</span><span class="chip">Transcription review</span><span class="chip">Localization</span><span class="chip">Multimodal datasets</span></div></div>
+        <div class="card skill"><h3>Embedded &amp; Edge AI</h3><div class="chips"><span class="chip">Embedded C/C++</span><span class="chip">MicroC</span><span class="chip">VHDL</span><span class="chip">On-device inference</span><span class="chip">Resource-constrained IoT</span><span class="chip">Sensor fusion</span><span class="chip">Smart sensors &amp; actuators</span></div></div>
+        <div class="card skill"><h3>Industrial automation</h3><div class="chips"><span class="chip">PLC · TIA Portal</span><span class="chip">Node-RED</span><span class="chip">CAN bus &amp; industrial networks</span><span class="chip">SCADA supervision</span><span class="chip">Digital twin</span><span class="chip">Industrial control</span><span class="chip">State-space control</span><span class="chip">Industrial robotics</span></div></div>
+        <div class="card skill"><h3>Electrical &amp; energy</h3><div class="chips"><span class="chip">Electrical machines</span><span class="chip">Power electronics</span><span class="chip">Variable-speed drives</span><span class="chip">Installation design</span><span class="chip">Generator protection</span><span class="chip">Electrical safety</span><span class="chip">Smart grids</span><span class="chip">Renewable energy</span></div></div>
+        <div class="card skill"><h3>CAD &amp; simulation</h3><div class="chips"><span class="chip">MATLAB/Simulink</span><span class="chip">CANECO</span><span class="chip">AutoCAD Electrical</span><span class="chip">CATIA</span><span class="chip">SolidWorks</span><span class="chip">3DEXPERIENCE</span><span class="chip">Unity</span></div></div>
+        <div class="card skill"><h3>Management &amp; programming</h3><div class="chips"><span class="chip">Project management</span><span class="chip">Lean management</span><span class="chip">Production management</span><span class="chip">Entrepreneurship</span><span class="chip">Python</span><span class="chip">C/C++</span><span class="chip">Java</span><span class="chip">Docker</span><span class="chip">Linux</span><span class="chip">Git/GitHub</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <p class="eyebrow">// projects</p>
+      <h2>Selected projects</h2>
+      <p class="sub">Code, documentation and tests are in the repository for every project with a link.</p>
+      <div class="grid g3">
+        <article class="card project featured">
+          <span class="badge">● New · 2026</span>
+          <h3>Intelligent Calendar — iOS app with an AI assistant</h3>
+          <p>An iPhone calendar and task manager whose AI assistant suggests events, tasks, free slots and schedule reorganisations. Privacy-first by design: calendar events stay on the device, assistant requests are not stored, and accounts use Sign in with Apple with tasks synced through an EU-hosted backend.</p>
+          <div class="tags"><span class="tag">iOS</span><span class="tag">LLM assistant</span><span class="tag">Supabase</span><span class="tag">Sign in with Apple</span><span class="tag">Privacy by design</span></div>
+          <div class="links"><a href="intelligent-calendar/privacy.html">Privacy policy →</a><a href="intelligent-calendar/terms.html">Terms →</a></div>
+        </article>
+        <article class="card project">
+          <h3>Air-Quality Anomaly Detection &amp; Power BI</h3>
+          <p>Sensor-based air monitoring (CO2, PM2.5, TVOC) with four complementary detectors and a 30-minute CO2 forecast. Catches 27 of 28 incidents with a 5-minute median delay, and exports a star schema with DAX measures for a Power BI dashboard.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Isolation Forest</span><span class="tag">Forecasting</span><span class="tag">Power BI</span><span class="tag">DAX</span></div>
+          <div class="links"><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/tree/main/Air_Quality_Anomaly_PowerBI">Code →</a></div>
+        </article>
+        <article class="card project featured">
+          <span class="badge">● Computer vision · automation</span>
+          <h3>AI PCB Component Detection, Chatbot &amp; Digital Twin</h3>
+          <p>A YOLO model served by the Roboflow API detects the components on a board. An n8n workflow builds the BOM and runs design checks (decoupling, LED resistors, crystal placement), an LLM chatbot explains the circuit and suggests optimizations, and a Unity digital twin rebuilds the board in 3D.</p>
+          <div class="tags"><span class="tag">YOLOv8</span><span class="tag">Roboflow</span><span class="tag">n8n</span><span class="tag">LLM chatbot</span><span class="tag">Unity</span><span class="tag">C#</span></div>
+          <div class="links"><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/tree/main/PCB_Component_Detection_DigitalTwin">Code →</a><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/tree/main/PCB_Component_Detection_DigitalTwin/n8n">n8n workflows →</a></div>
+        </article>
+        <article class="card project">
+          <h3>Quadrotor Drone Stability</h3>
+          <p>Nonlinear 6-DOF model and cascaded PID controller, verified by closed-loop poles and Routh-Hurwitz, then simulated: 0.7 % altitude overshoot, 2 s settling and wind-gust rejection within 2.3°.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Control</span><span class="tag">PID</span><span class="tag">MATLAB</span></div>
+          <div class="links"><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/tree/main/Quadrotor_Stability_Simulation">Code →</a></div>
+        </article>
+        <article class="card project">
+          <h3>Turbo-Alternator Electrical Study (OCP)</h3>
+          <p>Internship study of a 25 MVA steam turbo-alternator: rated currents, excitation and AVR, synchro-check logic and the generator protection scheme.</p>
+          <div class="tags"><span class="tag">Power systems</span><span class="tag">Protection</span><span class="tag">Synchronization</span></div>
+          <div class="links"><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/tree/main/OCP_TurboAlternator_Study">Study →</a></div>
+        </article>
+        <article class="card project">
+          <h3>Predictive Intelligent Maintenance</h3>
+          <p>Failure prediction from mooring-system telemetry with a leak-free pipeline, class-imbalance handling and recall-first evaluation of three models.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">IIoT</span></div>
+          <div class="links"><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/tree/main/MoorMaster_ML_Maintenance">Code →</a></div>
+        </article>
+        <article class="card project">
+          <h3>Automated LLM Evaluation Pipeline</h3>
+          <p>Runs prompts against Claude or GPT on labelled datasets, including adversarial cases like sarcasm and prompt injection, and reports accuracy and every failure. CI fails the build on regressions.</p>
+          <div class="tags"><span class="tag">LLM eval</span><span class="tag">Python</span><span class="tag">CI</span></div>
+          <div class="links"><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/blob/main/Prompt_Engineering_Demos/eval_harness.py">Code →</a></div>
+        </article>
+        <article class="card project">
+          <h3>Prompt Library — 95 prompts, 19 niches</h3>
+          <p>Five ready-to-adapt prompts per field, from LLM evaluation, red teaming and ASR to industrial maintenance, finance, legal and FR/AR/Darija localization.</p>
+          <div class="tags"><span class="tag">Prompting</span><span class="tag">RAG</span><span class="tag">Red teaming</span></div>
+          <div class="links"><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/blob/main/Prompt_Engineering_Demos/example_prompts.md">Browse →</a></div>
+        </article>
+        <article class="card project">
+          <h3>Agentic Business Automation</h3>
+          <p>An LLM-powered agent architecture orchestrating end-to-end business processes through multi-step API workflows.</p>
+          <div class="tags"><span class="tag">Agents</span><span class="tag">Tool use</span><span class="tag">APIs</span></div>
+        </article>
+        <article class="card project">
+          <h3>Moroccan Recipes Scraper</h3>
+          <p>A polite web scraper turning recipe pages into a structured dataset (titles, ingredients, steps).</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">BeautifulSoup</span><span class="tag">Data</span></div>
+          <div class="links"><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/tree/main/Moroccan_Recipes_Scraper">Code →</a></div>
+        </article>
       </div>
     </div>
   </section>

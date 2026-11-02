@@ -1,0 +1,59 @@
+// ─── Air-Quality Monitoring — DAX measures ───────────────────────────────────
+// Tables: fact_readings, fact_alerts, fact_forecast, dim_sensor (+ a Date table)
+// Relationships: dim_sensor[sensor_id] 1 → * fact_*[sensor_id]
+//                'Date'[Date] 1 → * fact_readings[date]  (date = DATEVALUE(timestamp), added in Power Query)
+
+// KPIs
+Avg CO2 (ppm)            = AVERAGE ( fact_readings[co2_ppm] )
+Avg PM2.5 (µg/m³)        = AVERAGE ( fact_readings[pm25_ugm3] )
+Max PM2.5 (µg/m³)        = MAX ( fact_readings[pm25_ugm3] )
+
+Readings                 = COUNTROWS ( fact_readings )
+Anomalous Readings       = CALCULATE ( [Readings], fact_readings[is_anomaly] = TRUE () )
+Anomaly Rate %           = DIVIDE ( [Anomalous Readings], [Readings] )
+
+Incidents                = COUNTROWS ( fact_alerts )
+Incident Hours           = DIVIDE ( SUM ( fact_alerts[duration_min] ), 60 )
+Avg Incident Duration (min) = AVERAGE ( fact_alerts[duration_min] )
+
+// Compliance: share of time below the alert levels
+CO2 Compliance %         =
+    DIVIDE (
+        CALCULATE ( [Readings], fact_readings[co2_ppm] <= 1000 ),
+        [Readings]
+    )
+PM2.5 Compliance %       =
+    DIVIDE (
+        CALCULATE ( [Readings], fact_readings[pm25_ugm3] <= 35 ),
+        [Readings]
+    )
+
+// Air Quality Index style status for cards (0 = good, 1 = moderate, 2 = poor)
+Air Status               =
+    VAR co2 = [Avg CO2 (ppm)]
+    VAR pm  = [Avg PM2.5 (µg/m³)]
+    RETURN
+        SWITCH (
+            TRUE (),
+            co2 > 1000 || pm > 35, "Poor",
+            co2 > 800  || pm > 15, "Moderate",
+            "Good"
+        )
+
+Status Color             =
+    SWITCH ( [Air Status], "Poor", "#D64545", "Moderate", "#E8A33D", "#2E9E6A" )
+
+// Detector breakdown
+Spike Flags              = CALCULATE ( [Readings], fact_readings[flag_spike] = TRUE () )
+Stuck Sensor Flags       = CALCULATE ( [Readings], fact_readings[flag_stuck] = TRUE () )
+Drift Flags              = CALCULATE ( [Readings], fact_readings[flag_drift] = TRUE () )
+Multivariate Flags       = CALCULATE ( [Readings], fact_readings[flag_iforest] = TRUE () )
+
+// Forecast (prediction page)
+Forecast MAE (ppm)       =
+    AVERAGEX ( fact_forecast, ABS ( fact_forecast[co2_forecast_30min] - fact_forecast[co2_actual] ) )
+Predicted Alerts         = CALCULATE ( COUNTROWS ( fact_forecast ), fact_forecast[predicted_alert] = TRUE () )
+
+// Trend vs previous day
+Avg CO2 Previous Day     = CALCULATE ( [Avg CO2 (ppm)], DATEADD ( 'Date'[Date], -1, DAY ) )
+CO2 Day-over-Day %       = DIVIDE ( [Avg CO2 (ppm)] - [Avg CO2 Previous Day], [Avg CO2 Previous Day] )
