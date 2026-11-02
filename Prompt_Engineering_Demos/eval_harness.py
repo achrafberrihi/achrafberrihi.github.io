@@ -102,7 +102,7 @@ def make_backend(spec: str) -> Callable[[str, dict], str]:
     provider, _, model = spec.partition(":")
 
     if provider == "mock":
-        # Replays the recorded output stored with each case — exercises the full
+        # Replays the recorded output stored with each case, which exercises the full
         # scoring pipeline offline and in CI.
         return lambda prompt, case: case.get("mock_output", "")
 

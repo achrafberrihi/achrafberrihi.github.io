@@ -1,4 +1,4 @@
-# MoorMaster™ NXG — Predictive Maintenance
+# MoorMaster™ NXG Predictive Maintenance
 
 Predicting component failures on an automated vacuum-pad mooring system from sensor telemetry, so maintenance can be scheduled before a breakdown instead of after it.
 
@@ -26,9 +26,9 @@ python sample_code.py data.csv --model all    # trains and compares 3 models
 | Decision tree | 0.750 | 0.364 | 0.868 |
 | Random forest | 0.675 | 0.540 | 0.954 |
 
-On this dataset the failure signal is close to linear, so logistic regression wins — a good reminder to benchmark a simple baseline before reaching for heavier models. On real telemetry, add time-window features (rolling means, trends since last service) and validate with a time-based split.
+On this dataset the failure signal is close to linear, so logistic regression wins. A simple baseline is worth benchmarking before heavier models. On real telemetry, add time-window features (rolling means, trends since last service) and validate with a time-based split.
 
 ## Files
 
-- `generate_data.py` — synthetic sensor dataset generator
-- `sample_code.py` — training, evaluation and model comparison (`--model logistic|decision_tree|random_forest|all`)
+- `generate_data.py`: synthetic sensor dataset generator
+- `sample_code.py`: training, evaluation and model comparison (`--model logistic|decision_tree|random_forest|all`)

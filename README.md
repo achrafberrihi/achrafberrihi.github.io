@@ -8,7 +8,7 @@ LLM evaluation & benchmarking · HITL data operations · Agentic automation · E
   <a href="mailto:achraf-berrihi@hotmail.com"><img src="https://img.shields.io/badge/Email-achraf--berrihi@hotmail.com-0D1117?style=for-the-badge&logo=maildotru&logoColor=white"/></a>
 </p>
 <p align="center"><a href="https://github.com/achrafberrihi/achrafberrihi.github.io/actions/workflows/ci.yml"><img src="https://github.com/achrafberrihi/achrafberrihi.github.io/actions/workflows/ci.yml/badge.svg" alt="CI"/></a></p>
-<p align="center">📍 Casablanca, Morocco — open to remote & relocation</p>
+<p align="center">📍 Casablanca, Morocco · open to remote & relocation</p>
 
 ---
 
@@ -24,10 +24,10 @@ I lead human-in-the-loop data workflows, evaluate and red-team LLM behaviour, cu
 
 ## Currently
 
-- **AI Data Operations Team Lead** — Agents Only Technologies
-- **AI Benchmarking Engineer** — Snorkel AI
-- **AI/LLM Speech Analyst** — Innodata
-- **AI Automation Developer** — King Caller AI
+- **AI Data Operations Team Lead**, Agents Only Technologies
+- **AI Benchmarking Engineer**, Snorkel AI
+- **AI/LLM Speech Analyst**, Innodata
+- **AI Automation Developer**, King Caller AI
 
 Full experience on the [portfolio](https://achrafberrihi.github.io/#experience).
 
@@ -40,7 +40,7 @@ Full experience on the [portfolio](https://achrafberrihi.github.io/#experience).
 | [`Quadrotor_Stability_Simulation`](./Quadrotor_Stability_Simulation) | 6-DOF quadrotor model, cascaded PID, pole analysis and gust-rejection simulation | Python · MATLAB · Control |
 | [`OCP_TurboAlternator_Study`](./OCP_TurboAlternator_Study) | Internship study of a 25 MVA turbo-alternator: currents, excitation, synchro-check, protections | Power systems |
 | [Intelligent Calendar](https://achrafberrihi.github.io/intelligent-calendar/privacy.html) | iOS calendar & task app with an AI scheduling assistant — privacy policy and terms hosted here | iOS · LLM · Supabase |
-| [`Prompt_Engineering_Demos`](./Prompt_Engineering_Demos) | 95 prompts across 19 niches + an LLM evaluation harness (Claude / GPT) with adversarial test sets | Python · LLMs |
+| [`Prompt_Engineering_Demos`](./Prompt_Engineering_Demos) | 95 prompts across 19 niches and an LLM evaluation harness with adversarial test sets | Python · LLMs |
 | [`MoorMaster_ML_Maintenance`](./MoorMaster_ML_Maintenance) | Predictive maintenance on mooring telemetry: leak-free pipeline, imbalance handling, model comparison | Python · scikit-learn |
 | [`Moroccan_Recipes_Scraper`](./Moroccan_Recipes_Scraper) | Polite scraper turning recipe pages into a structured dataset | Python · BeautifulSoup |
 
@@ -68,6 +68,6 @@ GitHub Actions runs linting, tests and the eval harness on every push. The portf
 
 ## Education
 
-- **State Engineer, Electrical Engineering & Intelligent Systems** — EMSI (2024 – present, graduating 2027)
-- **Bachelor's, Data & AI Engineering** — ENSEM Casablanca (2022–2023)
-- **Specialized Technician, Electromechanical Engineering** — ISIC (2017–2019)
+- **State Engineer, Electrical Engineering & Intelligent Systems**, EMSI (2024 – present, graduating 2027)
+- **Bachelor's, Data & AI Engineering**, ENSEM Casablanca (2022–2023)
+- **Specialized Technician, Electromechanical Engineering**, ISIC (2017–2019)

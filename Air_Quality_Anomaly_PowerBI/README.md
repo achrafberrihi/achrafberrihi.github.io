@@ -55,9 +55,9 @@ Outputs in `data/powerbi/`:
 | `fact_forecast` | actual vs 30-min forecast CO2 and predicted alerts |
 | `dim_sensor` | sensor, zone and alert limits |
 
-- [`powerbi/load_data.pq`](powerbi/load_data.pq) — Power Query to load and type the tables
-- [`powerbi/measures.dax`](powerbi/measures.dax) — KPIs, compliance %, air status with colour, detector breakdown, forecast MAE
-- [`powerbi/DASHBOARD.md`](powerbi/DASHBOARD.md) — step-by-step build of the 3 report pages (Overview, Anomalies, Prediction)
+- [`powerbi/load_data.pq`](powerbi/load_data.pq): Power Query to load and type the tables
+- [`powerbi/measures.dax`](powerbi/measures.dax): KPIs, compliance %, air status with colour, detector breakdown, forecast MAE
+- [`powerbi/DASHBOARD.md`](powerbi/DASHBOARD.md): step-by-step build of the 3 report pages (Overview, Anomalies, Prediction)
 
 ## Data
 

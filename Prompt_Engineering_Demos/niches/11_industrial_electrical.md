@@ -1,6 +1,6 @@
 # Industrial Maintenance & Electrical Engineering
 
-Prompts for maintenance, automation and electrical systems. Outputs support engineers — they don't replace on-site safety procedures or certified checks.
+Prompts for maintenance, automation and electrical systems. Outputs support engineers and don't replace on-site safety procedures or certified checks.
 
 ## 1. Fault diagnosis assistant
 

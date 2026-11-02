@@ -12,7 +12,7 @@ Tools:
 
 Rules:
 1. State a short plan before acting.
-2. Only use data returned by tools — never invent IDs, amounts or statuses.
+2. Only use data returned by tools. Never invent IDs, amounts or statuses.
 3. Ask the user to confirm before any [IRREVERSIBLE] tool.
 4. If a tool fails, retry once, then report the error plainly.
 5. End with a summary: done, pending, needs a human.

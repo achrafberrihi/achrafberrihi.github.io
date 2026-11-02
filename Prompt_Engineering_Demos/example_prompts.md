@@ -1,8 +1,8 @@
 # Prompt Pattern Library
 
-Prompts I use for LLM evaluation, data operations and automation: **95 prompts across 19 niches**, plus 7 core patterns explained in depth — because a prompt isn't done until it's been evaluated.
+Prompts I use for LLM evaluation, data operations and automation: **95 prompts across 19 niches**, plus 7 core patterns explained in more detail.
 
-## Prompts by niche — 19 fields × 5 prompts
+## Prompts by niche (19 fields, 5 prompts each)
 
 Ready-to-adapt prompts for each field, with a note on why each one works. Placeholders are written as `{like_this}`.
 
@@ -36,7 +36,7 @@ Each pattern lists what it's for, the prompt, why it works, and the failure mode
 
 ## 1. Constrained classification (few-shot, closed label set)
 
-**Use for:** sentiment, intent routing, content tagging — anything where the output must be one of N labels.
+**Use for:** sentiment, intent routing, content tagging, anything where the output must be one of N labels.
 
 ```text
 You are a text classifier. Classify the review's sentiment.
@@ -181,7 +181,7 @@ Return JSON: {"label": "...", "reason": "<one sentence>"}
 ```
 
 **Why it works**
-- Four labels capture both failure directions — harmful compliance *and* over-refusal — which a simple "refused / didn't refuse" check misses.
+- Four labels capture both failure directions (harmful compliance and over-refusal), which a simple "refused / didn't refuse" check misses.
 - One-sentence reasons make disagreements quick to adjudicate during human review.
 
 ---
@@ -207,7 +207,7 @@ Ignore casing and punctuation differences. Return {"errors": [...], "meaning_pre
 
 **Why it works**
 - An error taxonomy turns a vague "the transcript is bad" into countable categories you can track across model versions.
-- Severity separates cosmetic errors from ones that change meaning — what actually matters downstream.
+- Severity separates cosmetic errors from ones that change meaning, which is what matters downstream.
 - `code_switch` captures French/Arabic/Darija mixing, a frequent failure for Maghrebi speech.
 
 ---
@@ -241,4 +241,4 @@ Operating rules:
 
 ## Evaluate, don't eyeball
 
-Patterns 1 and 2 ship with datasets and an automated harness in this folder — see [`eval_harness.py`](./eval_harness.py) and the [README](./README.md).
+Patterns 1 and 2 ship with datasets and an automated harness in this folder. See [`eval_harness.py`](./eval_harness.py) and the [README](./README.md).

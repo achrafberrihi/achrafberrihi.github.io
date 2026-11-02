@@ -71,7 +71,7 @@ Return:
 - Customer sentiment at start and end
 - Actions taken by the agent
 - Open issues and promised follow-ups with dates
-- Compliance flags (e.g. agent didn't verify identity) — "none" if none
+- Compliance flags (e.g. agent didn't verify identity), or "none"
 Max 120 words.
 ```
 

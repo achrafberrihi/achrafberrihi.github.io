@@ -17,7 +17,7 @@ from .model import G, QuadParams, mixer
 
 @dataclass
 class Gains:
-    # attitude (per axis: roll, pitch, yaw) — torque = I * (kp*e + ki*∫e - kd*rate)
+    # attitude (per axis: roll, pitch, yaw), torque = I * (kp*e + ki*∫e - kd*rate)
     att_kp: tuple = (144.0, 144.0, 36.0)
     att_ki: tuple = (20.0, 20.0, 4.0)
     att_kd: tuple = (19.0, 19.0, 10.0)

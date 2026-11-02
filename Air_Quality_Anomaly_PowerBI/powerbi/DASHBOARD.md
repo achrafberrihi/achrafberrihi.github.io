@@ -1,4 +1,4 @@
-# Power BI dashboard — build guide
+# Power BI dashboard: build guide
 
 The pipeline writes a small star schema to `data/powerbi/`. This guide rebuilds the report in about 20 minutes.
 

@@ -1,4 +1,4 @@
-# Electrical Study of a Steam Turbo-Alternator — OCP Group, Jorf Lasfar
+# Electrical Study of a Steam Turbo-Alternator (OCP Group, Jorf Lasfar)
 
 **Engineering internship (PFA), July – August 2026** · Supervisors: OCP and EMSI
 

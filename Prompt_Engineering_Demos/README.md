@@ -1,6 +1,6 @@
 # Prompt Engineering & LLM Evaluation
 
-A library of **95 prompts across 19 niches** and 7 in-depth prompt patterns, plus a small harness that **measures** them on labelled data — because a prompt isn't finished until it has been evaluated.
+A library of **95 prompts across 19 niches** and 7 in-depth prompt patterns, plus a small harness that measures them on labelled data.
 
 ## What's inside
 
@@ -46,8 +46,8 @@ The two failures are exactly the cases the dataset was built to catch: a **sarca
 
 ## How scoring works
 
-- **`exact`** — label classification; case, whitespace and trailing punctuation are ignored so format drift ("Positive.") isn't confused with a wrong answer.
-- **`json_fields`** — field-level accuracy for extraction. Tolerates markdown fences, compares numbers numerically, and counts an invented value where `null` was expected as an error.
+- **`exact`**: label classification. Case, whitespace and trailing punctuation are ignored, so format drift ("Positive.") isn't counted as a wrong answer.
+- **`json_fields`**: field-level accuracy for extraction. Tolerates markdown fences, compares numbers numerically, and counts an invented value where `null` was expected as an error.
 
 ## Adding a task
 

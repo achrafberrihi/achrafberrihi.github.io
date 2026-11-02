@@ -1,4 +1,4 @@
-# Quadrotor Stability — Modeling & Simulation
+# Quadrotor Stability: Modeling and Simulation
 
 Nonlinear modeling of an X-configuration quadrotor drone, a cascaded PID flight controller, and a stability study combining **linear analysis** (closed-loop poles, Routh-Hurwitz) with **nonlinear time-domain simulation** (tracking, wind-gust rejection, actuator saturation).
 

@@ -22,7 +22,7 @@ n8n webhook ──► Roboflow API (YOLOv8) ──► circuit analysis ──►
 | Detection | Roboflow hosted YOLOv8 (`training/`) | Locate and classify resistors, capacitors, ICs, LEDs, crystals, connectors… |
 | Orchestration | `n8n/` | Webhook → inference → analysis → LLM → response, plus a follow-up chat workflow |
 | Analysis | `pcb_inspector/analysis.py` | Reference designators (R1, C2, U1…), BOM, design checks, quality score |
-| Chatbot | `pcb_inspector/chatbot.py` | Grounded explanation and prioritized optimizations (Claude or any OpenAI-compatible model, offline fallback) |
+| Chatbot | `pcb_inspector/chatbot.py` | Grounded explanation and prioritized optimizations (Anthropic or OpenAI-compatible API, offline fallback) |
 | Digital twin | `pcb_inspector/twin.py`, `unity/` | Pixel → millimetre mapping, Unity scene with status colours and click-to-inspect |
 
 ## Design checks

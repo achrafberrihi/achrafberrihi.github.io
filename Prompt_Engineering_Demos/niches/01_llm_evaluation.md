@@ -32,7 +32,7 @@ Request: """{prompt}"""
 Response A: """{response_a}"""
 Response B: """{response_b}"""
 
-Judge on helpfulness, accuracy and instruction following — not length or style.
+Judge on helpfulness, accuracy and instruction following, not on length or style.
 If both are equally good or equally bad, answer "tie".
 Explain your reasoning in at most 3 sentences, then output:
 {"winner": "A" | "B" | "tie"}
